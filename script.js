@@ -10,3 +10,13 @@ const map = new mapboxgl.Map({
     projection: 'naturalEarth',
     style: "mapbox://styles/iw00/cm7v16zql01tr01qo6qk93q42"
   });
+
+
+  // add function to the return button with flyto, bringing us back to our original zoom and center point
+document.getElementById('returnbutton').addEventListener('click', () => {
+  map.flyTo({
+      center: [-79.347212, 43.720271],
+      zoom: 10,
+      essential: true
+  });
+});
