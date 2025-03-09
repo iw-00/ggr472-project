@@ -11,3 +11,20 @@
     /*width of the button relative to width of the entire webpage*/
     width: 18.9%;
 }
+
+.map-search-container {
+    position: relative;
+    background: rgba(177, 128, 206, 0.5);
+    top: 0;
+    left: 0;
+    width: 260px;
+    margin: 10px 0 0 10px;
+    padding: 10px;
+    border-radius: 8px;
+    overflow: visible; /* does not clip overflow */
+}
+
+.geocoder {
+    position: relative;
+    margin: 10px 0;
+}
