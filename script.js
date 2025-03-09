@@ -15,8 +15,8 @@ const map = new mapboxgl.Map({
   // add function to the return button with flyto, bringing us back to our original zoom and center point
 document.getElementById('returnbutton').addEventListener('click', () => {
   map.flyTo({
-      center: [-79.347212, 43.720271],
-      zoom: 10,
+      center: [3.703304, 37.708399],
+      zoom: 5,
       essential: true
   });
 });
