@@ -36,7 +36,7 @@ map.on("load", () => {
   // Add source for show data
   map.addSource("show-data", {
       type: "geojson",
-      data: "data/shows.geojson"
+      data: "https://raw.githubusercontent.com/iw-00/ggr472-project/refs/heads/main/data/shows.geojson"
   });
 
   // Add stadium points to map
@@ -51,6 +51,9 @@ map.on("load", () => {
     });
 });
 
+// Add button to return to full extent.
+// ------------------------------------------------------------
+
   // add function to the return button with flyto, bringing us back to our original zoom and center point
 document.getElementById('returnbutton').addEventListener('click', () => {
   map.flyTo({
@@ -60,3 +63,23 @@ document.getElementById('returnbutton').addEventListener('click', () => {
   });
 });
 
+// Add pop-ups.
+// ------------------------------------------------------------
+
+// Switch cursor to pointer when mouse is over litter bin point layer.
+map.on("mouseenter", "show-pts", () => {
+  map.getCanvas().style.cursor = "pointer";
+});
+
+// Switch cursor back when mouse leaves layer.
+map.on("mouseleave", "show-pts", () => {
+  map.getCanvas().style.cursor = ""; // Switch cursor back when mouse leaves litter bins layer
+});
+
+map.on("click", "show-pts", (e) => {
+  new mapboxgl.Popup() // Declare new popup object on each click
+      .setLngLat(e.lngLat) // Use method to set coordinates of popup based on mouse click location
+      .setHTML(e.features[0].properties.venue + "<br>" +
+          "City: " + e.features[0].properties.city) // Use click event properties to write text for popup
+      .addTo(map); // Show popup on map
+});
