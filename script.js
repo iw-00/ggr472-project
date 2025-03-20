@@ -112,10 +112,10 @@ map.on("click", "show-pts", (e) => {
 
   // Attach an event listener after the popup is added to the map
   setTimeout(() => {
-  const stadiumBtn = document.getElementById(buttonID);
-  if (stadiumBtn) {
-    stadiumBtn.addEventListener("click", () => {
-      // Jump instantly to the stadium and tilt the map
+  const stadiumbtn = document.getElementById(buttonID);
+  if (stadiumbtn) {
+    stadiumbtn.addEventListener("click", () => {
+      // Jump to the stadium
       map.jumpTo({
         center: coordinates,
         zoom: 16,
