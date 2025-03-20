@@ -521,8 +521,8 @@
           "country": "France",
           "venue": "Paris La Défense Arena",
           "dates": "May 9-12, 2024",
-          "lat": 2.22968265437288,
-          "lng": 48.895645755632586
+          "lat": 48.895645755632586,
+          "lng": 2.22968265437288
         },
         "geometry": {
           "coordinates": [
@@ -578,8 +578,8 @@
           "country": "Spain",
           "venue": "Estadio Santiago Bernabéu",
           "dates": "May 29-30, 2024",
-          "lat": -3.6883507731682528,
-          "lng": 40.45306170097737
+          "lat": 40.45306170097737,
+          "lng": -3.6883507731682528
         },
         "geometry": {
           "coordinates": [
