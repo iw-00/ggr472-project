@@ -1,24 +1,39 @@
+.navbar {
+    height: 80px; /* Set your desired height */
+}
+
 .map-container {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
+    top: 80px;
+    right: 0;
+    width: 80%;
+    height: calc(100vh - 80px); /* Full viewport height minus navbar height */
+}
+
+.sidebar {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 20%;
+    height: calc(100vh - 80px); /* Full viewport height minus navbar height */
+    color: white;
+    padding: 20px;
+    overflow-y: auto;
 }
 
 #returnbutton {
-    /*margin : top margin, left margin, right margin*/
-    margin: 10px 10px 10px;
-    /*width of the button relative to width of the entire webpage*/
-    width: 18.9%;
+    /*width of the button relative to width of the sidebar*/
+    width: 100%;
 }
 
 .map-search-container {
     position: relative;
-    background: rgba(177, 128, 206, 0.5);
+    /* background: rgba(177, 128, 206, 0.5); */
+    background: rgba(0, 0, 0);
     top: 0;
     left: 0;
-    width: 260px;
-    margin: 10px 0 0 10px;
+    width: 100%;
+    margin-top: 20px;
     padding: 10px;
     border-radius: 8px;
     overflow: visible; /* does not clip overflow */

@@ -1,23 +1,26 @@
-/*------------------------------------------------------------------------------
-GGR472 Project: 
---------------------------------------------------------------------------------*/
+/*---------------------------
+INITIALIZE MAP
+---------------------------*/
 
-// Add default public map token from Mapbox.
-mapboxgl.accessToken = "pk.eyJ1IjoiaXcwMCIsImEiOiJjbTV2aXFlajYwMjZmMmtvbWtrMGRhd3lkIn0.DbEVxhgWv4ANYwpIpCc4iA"; 
+mapboxgl.accessToken = "pk.eyJ1Ijoic3RhbmZvcmRjaGFuZyIsImEiOiJjbTVvZHBxOHUwa3p2Mmxwbm90N2I0MzZqIn0.JfQLnEhITEAZl2kHoQP7rA"; // Mapbox access token
+// mapboxgl.accessToken = "pk.eyJ1IjoiaXcwMCIsImEiOiJjbTV2aXFlajYwMjZmMmtvbWtrMGRhd3lkIn0.DbEVxhgWv4ANYwpIpCc4iA";
 
 // Create map
 const map = new mapboxgl.Map({
     container: 'map',
     projection: 'mercator',
-    style: "mapbox://styles/iw00/cm7v16zql01tr01qo6qk93q42",
-    center: [2.340180, 26.389773], 
-    zoom: 1.8
-  });
+    style: "mapbox://styles/stanfordchang/cm8gipc43015j01s52jfo9p21", // custom style URL
+    // style: "mapbox://styles/iw00/cm7v16zql01tr01qo6qk93q42",
+    center: [2.340180, 26.389773], // starting location
+    zoom: 1.8 // starting zoom level
+});
 
-// Add zoom and rotation controls to the top left
+/*---------------------------
+MAP CONTROLS
+---------------------------*/
+
+// Add navigation and fullscreen controls
 map.addControl(new mapboxgl.NavigationControl());
-
-// Add fullscreen option
 map.addControl(new mapboxgl.FullscreenControl());
 
 // Create geocoder as a variable
@@ -26,11 +29,12 @@ const geocoder = new MapboxGeocoder({
     mapboxgl: mapboxgl
 });
 
-// Append geocoder variable to goeocoder HTML div to position on page
+// Append geocoder variable to geocoder HTML div to position on page
 document.getElementById("geocoder").appendChild(geocoder.onAdd(map));
 
-// Add data layers to map.
-// ------------------------------------------------------------
+/*---------------------------
+VISUALIZE DATA
+---------------------------*/
 map.on("load", () => {
 
   // Add source for show data
@@ -46,40 +50,51 @@ map.on("load", () => {
         source: "show-data",
         paint: {
             "circle-radius": 4,
-            "circle-color": "#1ff258"
+            "circle-color": "#ff0000"
         }
     });
 });
 
-// Add button to return to full extent.
-// ------------------------------------------------------------
+/*---------------------------
+BUTTON: RETURN TO FULL EXTENT
+-----------------------------*/
 
-  // add function to the return button with flyto, bringing us back to our original zoom and center point
+// Add function to the return button with flyto, bringing us back to our original zoom and center point
 document.getElementById('returnbutton').addEventListener('click', () => {
-  map.flyTo({
+    map.flyTo({
       center: [2.340180, 26.389773],
-      zoom: 1.8,
+      zoom: 1.8, // Reset to original zoom
+      pitch: 0, // Reset to original pitch
       essential: true
-  });
+    });
 });
 
-// Add pop-ups.
-// ------------------------------------------------------------
+/*---------------------------
+MOUSE EVENTS
+-----------------------------*/
 
-// Switch cursor to pointer when mouse is over litter bin point layer.
+// When mouse enters a point
 map.on("mouseenter", "show-pts", () => {
-  map.getCanvas().style.cursor = "pointer";
+  map.getCanvas().style.cursor = "pointer"; // Switch cursor to pointer
 });
 
-// Switch cursor back when mouse leaves layer.
+// When mouse leaves a point
 map.on("mouseleave", "show-pts", () => {
-  map.getCanvas().style.cursor = ""; // Switch cursor back when mouse leaves litter bins layer
+  map.getCanvas().style.cursor = ""; // Switch pointer to cursor
+
 });
 
+// When mouse clicks a point
 map.on("click", "show-pts", (e) => {
+  // Move camera to clicked point
+  map.flyTo({
+    center: e.features[0].geometry.coordinates,
+  });
+  
+  // Create and show popup
   new mapboxgl.Popup() // Declare new popup object on each click
-      .setLngLat(e.lngLat) // Use method to set coordinates of popup based on mouse click location
-      .setHTML(e.features[0].properties.venue + "<br>" +
-          "City: " + e.features[0].properties.city) // Use click event properties to write text for popup
-      .addTo(map); // Show popup on map
+    .setLngLat(e.features[0].geometry.coordinates) // Set popup location to point location
+    .setHTML(e.features[0].properties.venue + "<br>" + e.features[0].properties.city + ", " + e.features[0].properties.country)
+    .addTo(map); // Show popup on map
+
 });
