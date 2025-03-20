@@ -87,23 +87,23 @@ map.on("mouseleave", "show-pts", () => {
 
 // When mouse clicks a point
 map.on("click", "show-pts", (e) => {
+  const coordinates = [e.features[0].properties.lng, e.features[0].properties.lat] // Retrieve coordinates of point
+
   // Move camera to clicked point
   map.flyTo({
-    center: e.features[0].geometry.coordinates,
+    center: coordinates,
   });
 
-  const coordinates = e.features[0].geometry.coordinates // Retrieve coordinates of point
-  
   const buttonID = e.features[0].id // Retrieve ID of point for popup button
 
   const description = `
     <div>
       <h5>${e.features[0].properties.city}, ${e.features[0].properties.country}</h5>
-      <p>${e.features[0].properties.venue}</p>
+      <p>${e.features[0].properties.dates}</p>
       <button type="button" class="btn btn-outline-info" id="${buttonID}">Go to ${e.features[0].properties.venue}</button>
     </div>
   `;
-  
+
   // Create and show popup
   new mapboxgl.Popup() // Declare new popup object on each click
     .setLngLat(coordinates) // Set popup location to point location
