@@ -59,12 +59,13 @@ map.on("load", () => {
 BUTTON: RETURN TO FULL EXTENT
 -----------------------------*/
 
-// Add function to the return button with flyto, bringing us back to our original zoom and center point
+// Add function to the return button with jumpTo, bringing us back to our original zoom and center point
 document.getElementById('returnbutton').addEventListener('click', () => {
-    map.flyTo({
+    map.jumpTo({
       center: [2.340180, 26.389773],
       zoom: 1.8, // Reset to original zoom
       pitch: 0, // Reset to original pitch
+      bearing: 0, // Reset to original rotation
       essential: true
     });
 });
@@ -90,11 +91,38 @@ map.on("click", "show-pts", (e) => {
   map.flyTo({
     center: e.features[0].geometry.coordinates,
   });
+
+  const coordinates = e.features[0].geometry.coordinates // Retrieve coordinates of point
+  
+  const buttonID = e.features[0].id // Retrieve ID of point for popup button
+
+  const description = `
+    <div>
+      <h5>${e.features[0].properties.city}, ${e.features[0].properties.country}</h5>
+      <p>${e.features[0].properties.venue}</p>
+      <button type="button" class="btn btn-outline-info" id="${buttonID}">Go to ${e.features[0].properties.venue}</button>
+    </div>
+  `;
   
   // Create and show popup
   new mapboxgl.Popup() // Declare new popup object on each click
-    .setLngLat(e.features[0].geometry.coordinates) // Set popup location to point location
-    .setHTML(e.features[0].properties.venue + "<br>" + e.features[0].properties.city + ", " + e.features[0].properties.country)
+    .setLngLat(coordinates) // Set popup location to point location
+    .setHTML(description)
     .addTo(map); // Show popup on map
+
+  // Attach an event listener after the popup is added to the map
+  setTimeout(() => {
+  const stadiumBtn = document.getElementById(buttonID);
+  if (stadiumBtn) {
+    stadiumBtn.addEventListener("click", () => {
+      // Jump instantly to the stadium and tilt the map
+      map.jumpTo({
+        center: coordinates,
+        zoom: 16,
+        pitch: 60
+      });
+    });
+  }
+  }, 0);
 
 });

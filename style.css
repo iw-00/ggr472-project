@@ -22,7 +22,7 @@
 }
 
 #returnbutton {
-    /*width of the button relative to width of the sidebar*/
+    /* Width of the button relative to width of the sidebar */
     width: 100%;
 }
 
@@ -42,4 +42,17 @@
 .geocoder {
     position: relative;
     margin: 10px 0;
+}
+
+.mapboxgl-popup-content {
+    color: #000;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+
+/* Modifications to Bootswatch Lux theme */
+.btn-outline-info {
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 4px 10px;
 }
