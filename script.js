@@ -12,7 +12,7 @@ const map = new mapboxgl.Map({
     style: "mapbox://styles/stanfordchang/cm8gipc43015j01s52jfo9p21", // custom style URL
     // style: "mapbox://styles/iw00/cm7v16zql01tr01qo6qk93q42",
     center: [2.340180, 26.389773], // starting location
-    zoom: 1.8 // starting zoom level
+    zoom: 1.0 // starting zoom level
 });
 
 /*---------------------------
@@ -63,7 +63,7 @@ BUTTON: RETURN TO FULL EXTENT
 document.getElementById('returnbutton').addEventListener('click', () => {
     map.jumpTo({
       center: [2.340180, 26.389773],
-      zoom: 1.8, // Reset to original zoom
+      zoom: 1.0, // Reset to original zoom
       pitch: 0, // Reset to original pitch
       bearing: 0, // Reset to original rotation
       essential: true
