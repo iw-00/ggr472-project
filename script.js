@@ -76,53 +76,51 @@ MOUSE EVENTS
 
 // When mouse enters a point
 map.on("mouseenter", "show-pts", () => {
-  map.getCanvas().style.cursor = "pointer"; // Switch cursor to pointer
+    map.getCanvas().style.cursor = "pointer"; // Switch cursor to pointer
 });
 
 // When mouse leaves a point
 map.on("mouseleave", "show-pts", () => {
-  map.getCanvas().style.cursor = ""; // Switch pointer to cursor
-
+    map.getCanvas().style.cursor = ""; // Switch pointer to cursor
 });
 
 // When mouse clicks a point
 map.on("click", "show-pts", (e) => {
-  const coordinates = [e.features[0].properties.lng, e.features[0].properties.lat] // Retrieve coordinates of point
+    const coordinates = [e.features[0].properties.lng, e.features[0].properties.lat] // Retrieve coordinates of point
 
-  // Move camera to clicked point
-  map.flyTo({
-    center: coordinates,
-  });
-
-  const buttonID = e.features[0].id // Retrieve ID of point for popup button
-
-  const description = `
-    <div>
-      <h5>${e.features[0].properties.city}, ${e.features[0].properties.country}</h5>
-      <p>${e.features[0].properties.dates}</p>
-      <button type="button" class="btn btn-outline-info" id="${buttonID}">Go to ${e.features[0].properties.venue}</button>
-    </div>
-  `;
-
-  // Create and show popup
-  new mapboxgl.Popup() // Declare new popup object on each click
-    .setLngLat(coordinates) // Set popup location to point location
-    .setHTML(description)
-    .addTo(map); // Show popup on map
-
-  // Attach an event listener after the popup is added to the map
-  setTimeout(() => {
-  const stadiumbtn = document.getElementById(buttonID);
-  if (stadiumbtn) {
-    stadiumbtn.addEventListener("click", () => {
-      // Jump to the stadium
-      map.jumpTo({
-        center: coordinates,
-        zoom: 16.7,
-        pitch: 60
-      });
+    // Move camera to clicked point
+    map.flyTo({
+      center: coordinates,
     });
-  }
-  }, 0);
 
+    const buttonID = e.features[0].id // Retrieve ID of point for popup button
+
+    const description = `
+      <div>
+        <h5>${e.features[0].properties.city}, ${e.features[0].properties.country}</h5>
+        <p>${e.features[0].properties.dates}</p>
+        <button type="button" class="btn btn-outline-info" id="${buttonID}">Go to ${e.features[0].properties.venue}</button>
+      </div>
+    `;
+
+    // Create and show popup
+    new mapboxgl.Popup() // Declare new popup object on each click
+      .setLngLat(coordinates) // Set popup location to point location
+      .setHTML(description)
+      .addTo(map); // Show popup on map
+
+    // Attach an event listener after the popup is added to the map
+    setTimeout(() => {
+    const stadiumbtn = document.getElementById(buttonID);
+    if (stadiumbtn) {
+      stadiumbtn.addEventListener("click", () => {
+        // Jump to the stadium
+        map.jumpTo({
+          center: coordinates,
+          zoom: 16.7, // Zoom in to the stadium
+          pitch: 60 // Pitch the camera to show 3D buildings
+        });
+      });
+    }
+    }, 0);
 });

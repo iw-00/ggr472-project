@@ -9,6 +9,10 @@
           "venue": "State Farm Stadium",
           "dates": "March 17-18, 2023",
           "opener": ["Paramore", "Gayle"],
+          "shows": 2,
+          "guitar-surprise-song": ["mirrorball", "Tim McGraw"],
+          "piano-surprise-song": ["this is me trying", "State of Grace"],
+          "instagram": ["https://www.instagram.com/p/Cp_oNR6uHrh", "https://www.instagram.com/p/Cp8-L7jp2-C/"],
           "lat": 33.52780031633074,
           "lng": -112.26267189446308
         },
