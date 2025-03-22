@@ -3,6 +3,7 @@ INITIALIZE MAP
 ---------------------------*/
 
 mapboxgl.accessToken = "pk.eyJ1Ijoic3RhbmZvcmRjaGFuZyIsImEiOiJjbTVvZHBxOHUwa3p2Mmxwbm90N2I0MzZqIn0.JfQLnEhITEAZl2kHoQP7rA"; // Mapbox access token
+// pk.eyJ1Ijoic3RhbmZvcmRjaGFuZyIsImEiOiJjbTVvZHBxOHUwa3p2Mmxwbm90N2I0MzZqIn0.JfQLnEhITEAZl2kHoQP7rA
 // mapboxgl.accessToken = "pk.eyJ1IjoiaXcwMCIsImEiOiJjbTV2aXFlajYwMjZmMmtvbWtrMGRhd3lkIn0.DbEVxhgWv4ANYwpIpCc4iA";
 
 // Create map
@@ -10,7 +11,8 @@ const map = new mapboxgl.Map({
     container: 'map',
     projection: 'mercator',
     style: "mapbox://styles/stanfordchang/cm8gipc43015j01s52jfo9p21", // custom style URL
-    // style: "mapbox://styles/iw00/cm7v16zql01tr01qo6qk93q42",
+    // "mapbox://styles/stanfordchang/cm8gipc43015j01s52jfo9p21"
+    // "mapbox://styles/iw00/cm7v16zql01tr01qo6qk93q42"
     center: [2.340180, 26.389773], // starting location
     zoom: 1.0 // starting zoom level
 });
@@ -69,6 +71,15 @@ document.getElementById('returnbutton').addEventListener('click', () => {
       essential: true
     });
 
+    // Re-enable user interaction
+    map.scrollZoom.enable();
+    map.boxZoom.enable();
+    map.dragPan.enable();
+    map.dragRotate.enable();
+    map.keyboard.enable();
+    map.doubleClickZoom.enable();
+    map.touchZoomRotate.enable();
+
     map.setLayoutProperty('show-pts', 'visibility', 'visible') // Show stadium points
 
     stopRotation(); // Cancel rotation animation
@@ -125,11 +136,10 @@ map.on("click", "show-pts", (e) => {
           pitch: 65 // Pitch the camera to show 3D buildings
         });
 
-        // Hide stadium points
-        map.setLayoutProperty('show-pts', 'visibility', 'none')
-
         // Start continuous rotation animation
         startRotation(map);
+
+        // map.setStyle('mapbox://styles/stanfordchang/cm8gipc43015j01s52jfo9p21' + layer.target.id); // Change map style
       });
     }
     }, 0);
@@ -144,6 +154,15 @@ let rotationTimeout = null;
 // Function to start rotation
 function startRotation(map) {
 
+    // Disable user interaction
+    map.scrollZoom.disable();
+    map.boxZoom.disable();
+    map.dragPan.disable();
+    map.dragRotate.disable();
+    map.keyboard.disable();
+    map.doubleClickZoom.disable();
+    map.touchZoomRotate.disable();
+
     // Rotate function
     function rotate() {
       const currentZoom = map.getZoom(); // Check current zoom level
@@ -157,11 +176,14 @@ function startRotation(map) {
             duration: 5000, // For 5 seconds
             easing: (t) => t // Linear easing
           });
+
+          map.setLayoutProperty('show-pts', 'visibility', 'none') // Hide stadium points
         
           rotationTimeout = setTimeout(rotate, 5000); // Start next segment when animation is done
+          
         } 
         else {
-          stopRotation(map); // Stop rotation if zoom level is below 17
+          stopRotation(map); // Stop rotation
         }
     }
     
