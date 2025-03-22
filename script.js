@@ -3,16 +3,12 @@ INITIALIZE MAP
 ---------------------------*/
 
 mapboxgl.accessToken = "pk.eyJ1Ijoic3RhbmZvcmRjaGFuZyIsImEiOiJjbTVvZHBxOHUwa3p2Mmxwbm90N2I0MzZqIn0.JfQLnEhITEAZl2kHoQP7rA"; // Mapbox access token
-// pk.eyJ1Ijoic3RhbmZvcmRjaGFuZyIsImEiOiJjbTVvZHBxOHUwa3p2Mmxwbm90N2I0MzZqIn0.JfQLnEhITEAZl2kHoQP7rA
-// mapboxgl.accessToken = "pk.eyJ1IjoiaXcwMCIsImEiOiJjbTV2aXFlajYwMjZmMmtvbWtrMGRhd3lkIn0.DbEVxhgWv4ANYwpIpCc4iA";
 
 // Create map
 const map = new mapboxgl.Map({
     container: 'map',
     projection: 'mercator',
-    style: "mapbox://styles/stanfordchang/cm8gipc43015j01s52jfo9p21", // custom style URL
-    // "mapbox://styles/stanfordchang/cm8gipc43015j01s52jfo9p21"
-    // "mapbox://styles/iw00/cm7v16zql01tr01qo6qk93q42"
+    style: "mapbox://styles/stanfordchang/cm8kr9l8600rp01ry7b712acl", // custom style URL (Monochrome)
     center: [2.340180, 26.389773], // starting location
     zoom: 1.0 // starting zoom level
 });
@@ -37,16 +33,15 @@ document.getElementById("geocoder").appendChild(geocoder.onAdd(map));
 /*---------------------------
 VISUALIZE DATA
 ---------------------------*/
-map.on("load", () => {
+function visualizeData() {
+    // Add source for show data
+    map.addSource("show-data", {
+        type: "geojson",
+        data: "https://raw.githubusercontent.com/iw-00/ggr472-project/refs/heads/main/data/shows.geojson"
+    });
 
-  // Add source for show data
-  map.addSource("show-data", {
-      type: "geojson",
-      data: "https://raw.githubusercontent.com/iw-00/ggr472-project/refs/heads/main/data/shows.geojson"
-  });
-
-  // Add stadium points to map
-  map.addLayer({
+    // Add stadium points to map
+    map.addLayer({
         id: "show-pts",
         type: "circle",
         source: "show-data",
@@ -55,6 +50,10 @@ map.on("load", () => {
             "circle-color": "#ff0000"
         }
     });
+}
+
+map.on("load", () => {
+    visualizeData()
 });
 
 /*---------------------------
@@ -80,7 +79,12 @@ document.getElementById('returnbutton').addEventListener('click', () => {
     map.doubleClickZoom.enable();
     map.touchZoomRotate.enable();
 
-    map.setLayoutProperty('show-pts', 'visibility', 'visible') // Show stadium points
+    map.setStyle('mapbox://styles/stanfordchang/cm8kr9l8600rp01ry7b712acl'); // Change map style back to default
+
+    // Load sources and layers that were reset after style is changed
+    map.once('style.load', () => {
+        visualizeData();
+    });
 
     stopRotation(); // Cancel rotation animation
 });
@@ -139,7 +143,7 @@ map.on("click", "show-pts", (e) => {
         // Start continuous rotation animation
         startRotation(map);
 
-        // map.setStyle('mapbox://styles/stanfordchang/cm8gipc43015j01s52jfo9p21' + layer.target.id); // Change map style
+        map.setStyle('mapbox://styles/stanfordchang/cm8gipc43015j01s52jfo9p21'); // Change map style (Mapbox Standard)
       });
     }
     }, 0);
@@ -152,7 +156,7 @@ FUNCTION: ROTATE MAP
 let rotationTimeout = null;
 
 // Function to start rotation
-function startRotation(map) {
+function startRotation() {
 
     // Disable user interaction
     map.scrollZoom.disable();
