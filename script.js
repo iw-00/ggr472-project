@@ -118,7 +118,7 @@ map.on("click", "show-pts", (e) => {
       // Jump to the stadium
       map.jumpTo({
         center: coordinates,
-        zoom: 16,
+        zoom: 16.7,
         pitch: 60
       });
     });

@@ -84,6 +84,26 @@
       {
         "type": "Feature",
         "properties": {
+          "city": "Houston",
+          "country": "United States",
+          "venue": "NRG Stadium",
+          "dates": "April 21-23, 2023",
+          "opener": ["Beebadoobee", "Gracie Abrams"],
+          "lat": 29.684861347706146,
+          "lng": -95.41080792536349
+        },
+        "geometry": {
+          "coordinates": [
+            -95.41080792536349,
+            29.684861347706146
+          ],
+          "type": "Point"
+        },
+        "id": 4
+      },
+      {
+        "type": "Feature",
+        "properties": {
           "city": "Atlanta",
           "country": "United States",
           "venue": "Mercedes-Benz Stadium",
@@ -99,7 +119,7 @@
           ],
           "type": "Point"
         },
-        "id": 4
+        "id": 5
       },
       {
         "type": "Feature",
@@ -119,7 +139,7 @@
           ],
           "type": "Point"
         },
-        "id": 5
+        "id": 6
       },
       {
         "type": "Feature",
@@ -139,7 +159,7 @@
           ],
           "type": "Point"
         },
-        "id": 6
+        "id": 7
       },
       {
         "type": "Feature",
@@ -159,7 +179,7 @@
           ],
           "type": "Point"
         },
-        "id": 7
+        "id": 8
       },
       {
         "type": "Feature",
@@ -179,7 +199,7 @@
           ],
           "type": "Point"
         },
-        "id": 8
+        "id": 9
       },
       {
         "type": "Feature",
@@ -199,7 +219,7 @@
           ],
           "type": "Point"
         },
-        "id": 9
+        "id": 10
       },
       {
         "type": "Feature",
@@ -219,7 +239,7 @@
           ],
           "type": "Point"
         },
-        "id": 10
+        "id": 11
       },
       {
         "type": "Feature",
@@ -239,7 +259,7 @@
           ],
           "type": "Point"
         },
-        "id": 11
+        "id": 12
       },
       {
         "type": "Feature",
@@ -259,7 +279,7 @@
           ],
           "type": "Point"
         },
-        "id": 12
+        "id": 13
       },
       {
         "type": "Feature",
@@ -279,7 +299,7 @@
           ],
           "type": "Point"
         },
-        "id": 13
+        "id": 14
       },
       {
         "type": "Feature",
@@ -299,13 +319,13 @@
           ],
           "type": "Point"
         },
-        "id": 14
+        "id": 15
       },
       {
         "type": "Feature",
         "properties": {
           "city": "Denver",
-          "country": "Colorado",
+          "country": "United States",
           "venue": "Empower Field at Mile High",
           "dates": "July 14-15, 2023",
           "opener": ["Muna", "Gracie Abrams"],
@@ -319,7 +339,7 @@
           ],
           "type": "Point"
         },
-        "id": 15
+        "id": 16
       },
       {
         "type": "Feature",
@@ -339,7 +359,7 @@
           ],
           "type": "Point"
         },
-        "id": 16
+        "id": 17
       },
       {
         "type": "Feature",
@@ -359,7 +379,7 @@
           ],
           "type": "Point"
         },
-        "id": 17
+        "id": 18
       },
       {
         "type": "Feature",
@@ -379,7 +399,7 @@
           ],
           "type": "Point"
         },
-        "id": 18
+        "id": 19
       },
       {
         "type": "Feature",
@@ -399,7 +419,7 @@
           ],
           "type": "Point"
         },
-        "id": 19
+        "id": 20
       },
       {
         "type": "Feature",
@@ -419,7 +439,7 @@
           ],
           "type": "Point"
         },
-        "id": 20
+        "id": 21
       },
       {
         "type": "Feature",
@@ -439,7 +459,7 @@
           ],
           "type": "Point"
         },
-        "id": 21
+        "id": 22
       },
       {
         "type": "Feature",
@@ -459,7 +479,7 @@
           ],
           "type": "Point"
         },
-        "id": 22
+        "id": 23
       },
       {
         "type": "Feature",
@@ -478,7 +498,7 @@
           ],
           "type": "Point"
         },
-        "id": 23
+        "id": 24
       },
       {
         "type": "Feature",
@@ -498,7 +518,7 @@
           ],
           "type": "Point"
         },
-        "id": 24
+        "id": 25
       },
       {
         "type": "Feature",
@@ -518,7 +538,7 @@
           ],
           "type": "Point"
         },
-        "id": 25
+        "id": 26
       },
       {
         "type": "Feature",
@@ -538,7 +558,7 @@
           ],
           "type": "Point"
         },
-        "id": 26
+        "id": 27
       },
       {
         "type": "Feature",
@@ -547,8 +567,8 @@
           "country": "France",
           "venue": "Paris La Défense Arena",
           "dates": "May 9-12, 2024",
-          "lat": 2.22968265437288,
-          "lng": 48.895645755632586
+          "lat": 48.895645755632586,
+          "lng": 2.22968265437288
         },
         "geometry": {
           "coordinates": [
@@ -557,7 +577,7 @@
           ],
           "type": "Point"
         },
-        "id": 27
+        "id": 28
       },
       {
         "type": "Feature",
@@ -577,7 +597,7 @@
           ],
           "type": "Point"
         },
-        "id": 28
+        "id": 29
       },
       {
         "type": "Feature",
@@ -597,7 +617,7 @@
           ],
           "type": "Point"
         },
-        "id": 29
+        "id": 30
       },
       {
         "type": "Feature",
@@ -606,8 +626,8 @@
           "country": "Spain",
           "venue": "Estadio Santiago Bernabéu",
           "dates": "May 29-30, 2024",
-          "lat": -3.6883507731682528,
-          "lng": 40.45306170097737
+          "lat": 40.45306170097737,
+          "lng": -3.6883507731682528
         },
         "geometry": {
           "coordinates": [
@@ -616,7 +636,7 @@
           ],
           "type": "Point"
         },
-        "id": 30
+        "id": 31
       },
       {
         "type": "Feature",
@@ -636,7 +656,7 @@
           ],
           "type": "Point"
         },
-        "id": 31
+        "id": 32
       },
       {
         "type": "Feature",
@@ -656,7 +676,7 @@
           ],
           "type": "Point"
         },
-        "id": 32
+        "id": 33
       },
       {
         "type": "Feature",
@@ -676,7 +696,7 @@
           ],
           "type": "Point"
         },
-        "id": 33
+        "id": 34
       },
       {
         "type": "Feature",
@@ -696,7 +716,7 @@
           ],
           "type": "Point"
         },
-        "id": 34
+        "id": 35
       },
       {
         "type": "Feature",
@@ -716,7 +736,7 @@
           ],
           "type": "Point"
         },
-        "id": 35
+        "id": 36
       },
       {
         "type": "Feature",
@@ -736,7 +756,7 @@
           ],
           "type": "Point"
         },
-        "id": 36
+        "id": 37
       },
       {
         "type": "Feature",
@@ -756,7 +776,7 @@
           ],
           "type": "Point"
         },
-        "id": 37
+        "id": 38
       },
       {
         "type": "Feature",
@@ -776,7 +796,7 @@
           ],
           "type": "Point"
         },
-        "id": 38
+        "id": 39
       },
       {
         "type": "Feature",
@@ -796,7 +816,7 @@
           ],
           "type": "Point"
         },
-        "id": 39
+        "id": 40
       },
       {
         "type": "Feature",
@@ -816,7 +836,7 @@
           ],
           "type": "Point"
         },
-        "id": 40
+        "id": 41
       },
       {
         "type": "Feature",
@@ -836,7 +856,7 @@
           ],
           "type": "Point"
         },
-        "id": 41
+        "id": 42
       },
       {
         "type": "Feature",
@@ -856,7 +876,7 @@
           ],
           "type": "Point"
         },
-        "id": 42
+        "id": 43
       },
       {
         "type": "Feature",
@@ -876,7 +896,7 @@
           ],
           "type": "Point"
         },
-        "id": 43
+        "id": 44
       },
       {
         "type": "Feature",
@@ -896,7 +916,27 @@
           ],
           "type": "Point"
         },
-        "id": 44
+        "id": 45
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "city": "New Orleans",
+          "country": "United States",
+          "venue": "Caesars Superdome",
+          "dates": "October 25-27, 2024",
+          "opener": ["Gracie Abrams"],
+          "lat":  29.95105138339096,
+          "lng": -90.0810889858167
+        },
+        "geometry": {
+          "coordinates": [
+            -90.08108898581672,
+            29.95105138339096
+          ],
+          "type": "Point"
+        },
+        "id": 46
       },
       {
         "type": "Feature",
@@ -916,7 +956,7 @@
           ],
           "type": "Point"
         },
-        "id": 45
+        "id": 47
       },
       {
         "type": "Feature",
@@ -936,7 +976,7 @@
           ],
           "type": "Point"
         },
-        "id": 46
+        "id": 48
       },
       {
         "type": "Feature",
@@ -953,44 +993,6 @@
           "coordinates": [
             -123.11199381168475,
             49.276702965701304
-          ],
-          "type": "Point"
-        },
-        "id": 47
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "city": "New Orleans",
-          "country": "United States",
-          "venue": "Caesars Superdome",
-          "dates": "October 25-27, 2024",
-          "opener": ["Gracie Abrams"],
-          "lat": "-90.08108898581672",
-          "lng": "29.95105138339096"
-        },
-        "geometry": {
-          "coordinates": [
-            -90.08108898581672,
-            29.95105138339096
-          ],
-          "type": "Point"
-        },
-        "id": 48
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "city": "Houston",
-          "country": "United States",
-          "venue": "NRG Stadium",
-          "dates": "April 21-23, 2023",
-          "opener": ["Beebadoobee", "Gracie Abrams"]
-        },
-        "geometry": {
-          "coordinates": [
-            -95.41080792536349,
-            29.684861347706146
           ],
           "type": "Point"
         },
