@@ -68,6 +68,17 @@ document.getElementById('returnbutton').addEventListener('click', () => {
       bearing: 0, // Reset to original rotation
       essential: true
     });
+
+    // Re-enable user interaction
+    map.scrollZoom.enable();
+    map.boxZoom.enable();
+    map.dragPan.enable();
+    map.dragRotate.enable();
+    map.keyboard.enable();
+    map.doubleClickZoom.enable();
+    map.touchZoomRotate.enable();
+
+    stopRotation(); // Cancel rotation animation
 });
 
 /*---------------------------
@@ -117,10 +128,58 @@ map.on("click", "show-pts", (e) => {
         // Jump to the stadium
         map.jumpTo({
           center: coordinates,
-          zoom: 16.7, // Zoom in to the stadium
+          zoom: 17, // Zoom in to the stadium
           pitch: 60 // Pitch the camera to show 3D buildings
         });
+
+        // Disable user interaction
+        map.scrollZoom.disable();
+        map.boxZoom.disable();
+        map.dragPan.disable();
+        map.dragRotate.disable();
+        map.keyboard.disable();
+        map.doubleClickZoom.disable();
+        map.touchZoomRotate.disable();
+
+        // Start continuous rotation animation
+        startRotation(map);
       });
     }
     }, 0);
 });
+
+/*---------------------------
+FUNCTION: ROTATE MAP
+-----------------------------*/
+
+let rotationTimeout = null;
+
+// Function to start rotation
+function startRotation(map) {
+    // Animate rotation
+    function rotate() {
+      const currentBearing = map.getBearing();
+
+      map.easeTo({
+        bearing: currentBearing + 120, // Rotate 120 degrees
+        duration: 20000, // For 20 seconds
+        easing: (t) => t // Linear easing
+      });
+      
+      // When animation is done, start next segment
+      rotationTimeout = setTimeout(rotate, 20000);
+    }
+    
+    // Start rotation
+    rotate();
+}
+
+// Function to stop rotation
+function stopRotation() {
+    if (rotationTimeout) {
+      clearTimeout(rotationTimeout);
+      rotationTimeout = null;
+    }
+    
+    map.stop(); // Stop any active camera animations
+}
