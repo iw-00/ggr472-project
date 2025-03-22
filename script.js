@@ -69,14 +69,7 @@ document.getElementById('returnbutton').addEventListener('click', () => {
       essential: true
     });
 
-    // Re-enable user interaction
-    map.scrollZoom.enable();
-    map.boxZoom.enable();
-    map.dragPan.enable();
-    map.dragRotate.enable();
-    map.keyboard.enable();
-    map.doubleClickZoom.enable();
-    map.touchZoomRotate.enable();
+    map.setLayoutProperty('show-pts', 'visibility', 'visible') // Show stadium points
 
     stopRotation(); // Cancel rotation animation
 });
@@ -129,17 +122,11 @@ map.on("click", "show-pts", (e) => {
         map.jumpTo({
           center: coordinates,
           zoom: 17, // Zoom in to the stadium
-          pitch: 60 // Pitch the camera to show 3D buildings
+          pitch: 65 // Pitch the camera to show 3D buildings
         });
 
-        // Disable user interaction
-        map.scrollZoom.disable();
-        map.boxZoom.disable();
-        map.dragPan.disable();
-        map.dragRotate.disable();
-        map.keyboard.disable();
-        map.doubleClickZoom.disable();
-        map.touchZoomRotate.disable();
+        // Hide stadium points
+        map.setLayoutProperty('show-pts', 'visibility', 'none')
 
         // Start continuous rotation animation
         startRotation(map);
@@ -156,21 +143,29 @@ let rotationTimeout = null;
 
 // Function to start rotation
 function startRotation(map) {
-    // Animate rotation
-    function rotate() {
-      const currentBearing = map.getBearing();
 
-      map.easeTo({
-        bearing: currentBearing + 120, // Rotate 120 degrees
-        duration: 20000, // For 20 seconds
-        easing: (t) => t // Linear easing
-      });
+    // Rotate function
+    function rotate() {
+      const currentZoom = map.getZoom(); // Check current zoom level
       
-      // When animation is done, start next segment
-      rotationTimeout = setTimeout(rotate, 20000);
+      // Only continue rotating if zoom level is equal or greater than 17
+      if (currentZoom >= 17) {
+          const currentBearing = map.getBearing();
+          
+          map.easeTo({
+            bearing: currentBearing + 120, // Rotate 120 degrees
+            duration: 5000, // For 5 seconds
+            easing: (t) => t // Linear easing
+          });
+        
+          rotationTimeout = setTimeout(rotate, 5000); // Start next segment when animation is done
+        } 
+        else {
+          stopRotation(map); // Stop rotation if zoom level is below 17
+        }
     }
     
-    // Start rotation
+    // Run rotate function again
     rotate();
 }
 
