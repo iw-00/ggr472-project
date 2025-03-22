@@ -8,6 +8,7 @@
           "country": "United States",
           "venue": "State Farm Stadium",
           "dates": "March 17-18, 2023",
+          "opener": ["Paramore", "Gayle"],
           "lat": 33.52780031633074,
           "lng": -112.26267189446308
         },
@@ -27,6 +28,7 @@
           "country": "United States",
           "venue": "Allegiant Stadium",
           "dates": "March 24-25, 2023",
+          "opener": ["Beebadoobee", "Gayle"],
           "lat": 36.090815480645944,
           "lng": -115.1834361467243
         },
@@ -46,6 +48,7 @@
           "country": "United States",
           "venue": "AT&T Stadium",
           "dates": "March 31-April 2, 2023",
+          "opener": ["Muna", "Gayle", "Beebadoobee", "Gracie Abrams"],
           "lat": 32.74785338409478,
           "lng": -97.09282537035783
         },
@@ -65,6 +68,7 @@
           "country": "United States",
           "venue": "Raymond James Stadium",
           "dates": "April 13-15, 2023",
+          "opener": ["Gayle", "Beebadoobee", "Gracie Abrams"],
           "lat": 27.975981565163934,
           "lng": -82.50334566323585
         },
@@ -84,6 +88,7 @@
           "country": "United States",
           "venue": "Mercedes-Benz Stadium",
           "dates": "April 28-30, 2023",
+          "opener": ["Muna", "Gayle", "Beebadoobee", "Gracie Abrams"],
           "lat": 53.43087545880084,
           "lng": -2.96076495628688
         },
@@ -103,6 +108,7 @@
           "country": "United States",
           "venue": "Nissan Stadium",
           "dates": "May 5-7, 2023",
+          "opener": ["Phoebe Bridgers", "Gayle", "Gracie Abrams"],
           "lat": 36.166488661274926,
           "lng": -86.77126808332939
         },
@@ -122,6 +128,7 @@
           "country": "United States",
           "venue": "Lincoln Financial Field",
           "dates": "May 12-14, 2023",
+          "opener": ["Phoebe Bridgers", "Gayle", "Gracie Abrams"],
           "lat": 39.90080026631401,
           "lng": -75.16745394708197
         },
@@ -141,6 +148,7 @@
           "country": "United States",
           "venue": "Gillette Stadium",
           "dates": "May 19-21, 2023",
+          "opener": ["Phoebe Bridgers", "Gayle", "Gracie Abrams"],
           "lat": 42.09093862727431,
           "lng": -71.26436139021129
         },
@@ -160,6 +168,7 @@
           "country": "United States",
           "venue": "MetLife Stadium",
           "dates": "May 26-28, 2023",
+          "opener": ["Phoebe Bridgers", "Gayle", "Gracie Abrams", "Owenn"],
           "lat": 40.81354382036679,
           "lng": -74.07436008863785
         },
@@ -179,6 +188,7 @@
           "country": "United States",
           "venue": "Soldier Field",
           "dates": "June 2-4, 2023",
+          "opener": ["Girl in Red", "Muna", "Gracie Abrams", "Owenn"],
           "lat": 41.8623141751809,
           "lng": -87.61669812651816
         },
@@ -197,7 +207,8 @@
           "city": "Detroit",
           "country": "United States",
           "venue": "Ford Field",
-          "dates": "June 9-10, 2024",
+          "dates": "June 9-10, 2023",
+          "opener": ["Girl in Red", "Gracie Abrams", "Owenn"],
           "lat": 42.340047647944175,
           "lng": -83.04561206133548
         },
@@ -217,6 +228,7 @@
           "country": "United States",
           "venue": "Acrisure Stadium",
           "dates": "June 16-17, 2023",
+          "opener": ["Girl in Red", "Gracie Abrams", "Owenn"],
           "lat": 40.4468014751435,
           "lng": -80.01575872615824
         },
@@ -236,6 +248,7 @@
           "country": "United States",
           "venue": "U.S. Bank Stadium",
           "dates": "June 23-24, 2023",
+          "opener": ["Girl in Red", "Gracie Abrams", "Owenn"],
           "lat": 44.973573744635644,
           "lng": -93.25745879629471
         },
@@ -255,6 +268,7 @@
           "country": "United States",
           "venue": "Paycor Stadium",
           "dates": "June 30-July 1, 2023",
+          "opener": ["Muna", "Gracie Abrams"],
           "lat": 39.0954542264671,
           "lng": -84.51610250279344
         },
@@ -274,6 +288,7 @@
           "country": "United States",
           "venue": "GEHA Field at Arrowhead Stadium",
           "dates": "July 7-8, 2023",
+          "opener": ["Muna", "Gracie Abrams"],
           "lat": 39.04894484903153,
           "lng": -94.48398945334367
         },
@@ -293,6 +308,7 @@
           "country": "Colorado",
           "venue": "Empower Field at Mile High",
           "dates": "July 14-15, 2023",
+          "opener": ["Muna", "Gracie Abrams"],
           "lat": 39.74391881069519,
           "lng": -105.02010903819499
         },
@@ -312,6 +328,7 @@
           "country": "United States",
           "venue": "Lumen Field",
           "dates": "July 22-23, 2023",
+          "opener": ["Haim", "Gracie Abrams"],
           "lat": 47.59512889107481,
           "lng": -122.33161666055514
         },
@@ -331,6 +348,7 @@
           "country": "United States",
           "venue": "Levi's Stadium",
           "dates": "July 28-29, 2023",
+          "opener": ["Haim", "Gracie Abrams"],
           "lat": 37.403174806415024,
           "lng": -121.96981008465573
         },
@@ -350,6 +368,7 @@
           "country": "United States",
           "venue": "SoFi Stadium",
           "dates": "August 3-5 & 7-9, 2023",
+          "opener": ["Haim", "Gracie Abrams", "Owenn", "Gayle"],
           "lat": 33.9534649798311,
           "lng": -118.33890717063935
         },
@@ -369,6 +388,7 @@
           "country": "Mexico",
           "venue": "Foro Sol",
           "dates": "August 24-27, 2023",
+          "opener": ["Sabrina Carpenter"],
           "lat": 19.405032786935877,
           "lng": -99.09556610104056
         },
@@ -388,6 +408,7 @@
           "country": "Argentina",
           "venue": "Estadio River Plate",
           "dates": "November 9 & 11-12, 2023",
+          "opener": ["Sabrina Carpenter", "Louta"],
           "lat": -34.54531318363597,
           "lng": -58.44972256218034
         },
@@ -407,6 +428,7 @@
           "country": "Brazil",
           "venue": "Estádio Olímpico Nilton Santos",
           "dates": "November 17 & 19-20, 2023",
+          "opener": ["Sabrina Carpenter"],
           "lat": -22.893198940104185,
           "lng": -43.292432149971745
         },
@@ -426,6 +448,7 @@
           "country": "Brazil",
           "venue": "Allianz Parque",
           "dates": "November 24-26, 2023",
+          "opener": ["Sabrina Carpenter"],
           "lat": -23.52746163180298,
           "lng": -46.67856105428652
         },
@@ -464,6 +487,7 @@
           "country": "Australia",
           "venue": "Melbourne Cricket Ground",
           "dates": "February 16-18, 2024",
+          "opener": ["Sabrina Carpenter"],
           "lat": -37.81997714148464,
           "lng": 144.98346373471486
         },
@@ -483,6 +507,7 @@
           "country": "Australia",
           "venue": "Accor Stadium",
           "dates": "February 23-26, 2024",
+          "opener": ["Sabrina Carpenter"],
           "lat": -33.847110943298105,
           "lng": 151.06338979784613
         },
@@ -502,6 +527,7 @@
           "country": "Singapore",
           "venue": "Singapore National Stadium",
           "dates": "March 2-4 & 7-9, 2024",
+          "opener": ["Sabrina Carpenter"],
           "lat": 1.304456078803753,
           "lng": 103.8743044991171
         },
@@ -521,8 +547,8 @@
           "country": "France",
           "venue": "Paris La Défense Arena",
           "dates": "May 9-12, 2024",
-          "lat": 48.895645755632586,
-          "lng": 2.22968265437288
+          "lat": 2.22968265437288,
+          "lng": 48.895645755632586
         },
         "geometry": {
           "coordinates": [
@@ -540,6 +566,7 @@
           "country": "Sweden",
           "venue": "Friends Arena",
           "dates": "May 17-19, 2024",
+          "opener": ["Paramore"],
           "lat": 59.37265939075607,
           "lng": 18.00047856695997
         },
@@ -559,6 +586,7 @@
           "country": "Portugal",
           "venue": "Estádio da Luz",
           "dates": "May 24-25, 2024",
+          "opener": ["Paramore"],
           "lat": 38.752696661822796,
           "lng": -9.184682139926196
         },
@@ -578,8 +606,8 @@
           "country": "Spain",
           "venue": "Estadio Santiago Bernabéu",
           "dates": "May 29-30, 2024",
-          "lat": 40.45306170097737,
-          "lng": -3.6883507731682528
+          "lat": -3.6883507731682528,
+          "lng": 40.45306170097737
         },
         "geometry": {
           "coordinates": [
@@ -597,6 +625,7 @@
           "country": "France",
           "venue": "Groupama Stadium",
           "dates": "June 2-3, 2024",
+          "opener": ["Paramore"],
           "lat": 45.76521495742506,
           "lng": 4.982048556176977
         },
@@ -616,6 +645,7 @@
           "country": "United Kingdom",
           "venue": "Murrayfield Stadium",
           "dates": "June 7-9 2024",
+          "opener": ["Paramore"],
           "lat": 55.94224191955368,
           "lng": -3.2410083178784816
         },
@@ -635,6 +665,7 @@
           "country": "United Kingdom",
           "venue": "Anfield",
           "dates": "June 13-15, 2024",
+          "opener": ["Paramore"],
           "lat": 53.43087545880084,
           "lng": -2.96076495628688
         },
@@ -654,6 +685,7 @@
           "country": "United Kingdom",
           "venue": "Principality Stadium",
           "dates": "June 18, 2024",
+          "opener": ["Paramore"],
           "lat": 51.4782954999184,
           "lng": -3.1825879365234186
         },
@@ -673,6 +705,7 @@
           "country": "United Kingdom",
           "venue": "Wembley Stadium",
           "dates": "June 21-23, August 15-17 & 19-20, 2024",
+          "opener": ["Paramore", "Mette", "Griff", "Benson Boone", "Sofia Isella", "Holly Humberstone", "Suki Waterhouse", "Maisie Peters", "Raye"],
           "lat": 51.55595455407689,
           "lng": -0.2795869343007098
         },
@@ -692,6 +725,7 @@
           "country": "Ireland",
           "venue": "Aviva Stadium",
           "dates": "June 28-30, 2024",
+          "opener": ["Paramore"],
           "lat": 53.33523366474381,
           "lng": -6.22828929537107
         },
@@ -711,6 +745,7 @@
           "country": "Netherlands",
           "venue": "Johan Cruyff Arena",
           "dates": "July 4-6, 2024",
+          "opener": ["Paramore"],
           "lat": 52.314331942849975,
           "lng": 4.941903307145509
         },
@@ -730,6 +765,7 @@
           "country": "Switzerland",
           "venue": "Letzigrund",
           "dates": "July 9-10, 2024",
+          "opener": ["Paramore"],
           "lat": 47.382788194642615,
           "lng": 8.503832771649826
         },
@@ -749,6 +785,7 @@
           "country": "Italy",
           "venue": "San Siro",
           "dates": "July 13-14, 2024",
+          "opener": ["Paramore"],
           "lat": 45.47808795253803,
           "lng": 9.123942854792205
         },
@@ -768,6 +805,7 @@
           "country": "Germany",
           "venue": "Veltins-Arena",
           "dates": "July 17-19, 2024",
+          "opener": ["Paramore"],
           "lat": 51.554608071399855,
           "lng": 7.067592937418311
         },
@@ -787,6 +825,7 @@
           "country": "Germany",
           "venue": "Volksparkstadion",
           "dates": "July 23-24, 2024",
+          "opener": ["Paramore"],
           "lat": 53.587181217302515,
           "lng": 9.898721637407846
         },
@@ -806,6 +845,7 @@
           "country": "Germany",
           "venue": "Olympiastadion",
           "dates": "July 27-28, 2024",
+          "opener": ["Paramore"],
           "lat": 52.51464916451846,
           "lng": 13.239594756441619
         },
@@ -825,6 +865,7 @@
           "country": "Poland",
           "venue": "PGE Narodowy",
           "dates": "August 1-3, 2024",
+          "opener": ["Paramore"],
           "lat": 52.23964082044023,
           "lng": 21.045806751917127
         },
@@ -844,6 +885,7 @@
           "country": "United States",
           "venue": "Hard Rock Stadium",
           "dates": "October 18-20, 2024",
+          "opener": ["Gracie Abrams"],
           "lat": 39.7600879083231,
           "lng": -86.16377508078527
         },
@@ -863,6 +905,7 @@
           "country": "United States",
           "venue": "Lucas Oil Stadium",
           "dates": "November 1-3, 2024",
+          "opener": ["Gracie Abrams"],
           "lat": 39.7600879083231,
           "lng": -86.16377508078527
         },
@@ -882,6 +925,7 @@
           "country": "Canada",
           "venue": "Rogers Centre",
           "dates": "November 14, 15, 16, 21, 22 & 23, 2024",
+          "opener": ["Gracie Abrams"],
           "lat": 43.6416111549662,
           "lng": -79.38917731458956
         },
@@ -901,6 +945,7 @@
           "country": "Canada",
           "venue": "BC Place",
           "dates": "December 6, 7 & 8 2024",
+          "opener": ["Gracie Abrams"],
           "lat": 49.276702965701304,
           "lng": -123.11199381168475
         },
@@ -920,6 +965,7 @@
           "country": "United States",
           "venue": "Caesars Superdome",
           "dates": "October 25-27, 2024",
+          "opener": ["Gracie Abrams"],
           "lat": "-90.08108898581672",
           "lng": "29.95105138339096"
         },
@@ -931,6 +977,24 @@
           "type": "Point"
         },
         "id": 48
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "city": "Houston",
+          "country": "United States",
+          "venue": "NRG Stadium",
+          "dates": "April 21-23, 2023",
+          "opener": ["Beebadoobee", "Gracie Abrams"]
+        },
+        "geometry": {
+          "coordinates": [
+            -95.41080792536349,
+            29.684861347706146
+          ],
+          "type": "Point"
+        },
+        "id": 49
       }
     ]
   }
