@@ -47,7 +47,7 @@ function visualizeData() {
         source: "show-data",
         paint: {
             "circle-radius": 4,
-            "circle-color": "#ff0000"
+            "circle-color": "#5B1166"
         }
     });
 }
