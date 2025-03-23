@@ -255,13 +255,13 @@ function checkVisibility() {
   const showInformation = document.getElementById('show-info');
 
   if (zoomLevel >= 17 && pitchLevel >=65) {
-    searchContainer.style.display = 'hidden';
-    openerDropdown.style.display = 'hidden';
-    showInformation.style.display = 'visible';
+    searchContainer.style.display = 'block';
+    openerDropdown.style.display = 'block';
+    showInformation.style.display = 'none';
   } else {
-    searchContainer.style.display = 'visible';
-    openerDropdown.style.display = 'visible';
-    showInformation.style.display = 'hidden';
+    searchContainer.style.display = 'none';
+    openerDropdown.style.display = 'none';
+    showInformation.style.display = 'block';
   }
 }
 
