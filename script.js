@@ -250,18 +250,22 @@ function checkVisibility() {
   const zoomLevel = map.getZoom();
   const pitchLevel = map.getPitch();
 
-  const searchContainer = document.getElementById('search-container');
+  console.log(`zoom level: ${zoomLevel}, Pitch level: ${pitchLevel}`);
+
+  const searchContainer = document.getElementById('map-search-container');
   const openerDropdown = document.getElementById('opener-dropdown')
   const showInformation = document.getElementById('show-info');
 
   if (zoomLevel >= 17 && pitchLevel >=65) {
-    searchContainer.style.display = 'block';
-    openerDropdown.style.display = 'block';
-    showInformation.style.display = 'none';
-  } else {
+    console.log('Showing searchContainer and openerDropdown, hiding showInformation');
     searchContainer.style.display = 'none';
     openerDropdown.style.display = 'none';
     showInformation.style.display = 'block';
+  } else {
+    console.log('Hiding searchContainer and openerDropdown, showing showInformation');
+    searchContainer.style.display = 'block';
+    openerDropdown.style.display = 'block';
+    showInformation.style.display = 'none';
   }
 }
 
