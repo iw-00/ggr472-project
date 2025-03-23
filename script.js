@@ -49,7 +49,16 @@ map.on("load", () => {
         type: "circle",
         source: "show-data",
         paint: {
-            "circle-radius": 4,
+            "circle-radius": [
+              "step",
+              ["get", "shows"],
+              3,
+              1, 3,
+              2, 4,
+              3, 5,
+              4, 6,
+              5, 7
+            ],
             "circle-color": "#ff0000"
         }
     });
