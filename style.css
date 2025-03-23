@@ -6,28 +6,19 @@
     position: absolute;
     top: 80px;
     right: 0;
-    width: 80%;
+    width: 100%;
     height: calc(100vh - 80px); /* Full viewport height minus navbar height */
-}
-
-.sidebar {
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 20%;
-    height: calc(100vh - 80px); /* Full viewport height minus navbar height */
-    color: white;
-    padding: 20px;
-    overflow-y: auto;
 }
 
 #returnbutton {
     /* Width of the button relative to width of the sidebar */
-    width: 100%;
+    width: 16.5%;
+    top: 5px;
+    left: 5px
 }
 
 .map-search-container {
-    position: relative;
+    position: left;
     /* background: rgba(177, 128, 206, 0.5); */
     background: rgba(0, 0, 0);
     top: 0;
@@ -40,8 +31,14 @@
 }
 
 .geocoder {
-    position: relative;
-    margin: 10px 0;
+    position: fixed;
+    top: 220px;
+    left: 5px;
+    background: rgba(0, 0, 0);
+    padding: 10px;
+    border-radius: 8px;
+    overflow: visible; 
+    width: 16.5%
 }
 
 .mapboxgl-popup-content {
@@ -58,12 +55,12 @@
 }
 
 .opener-dropdown {
-    position: relative;
+    position: fixed;
     /* background: rgba(177, 128, 206, 0.5); */
     background: rgba(0, 0, 0);
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 120px;
+    left: 5px;
+    width: 16.5%;
     margin-top: 20px;
     padding: 10px;
     border-radius: 8px;

@@ -96,7 +96,7 @@ document.getElementById('returnbutton').addEventListener('click', () => {
     });
 
     stopRotation(); // Cancel rotation animation
-});
+  });
 
 /*---------------------------
 MOUSE EVENTS
