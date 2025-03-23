@@ -57,13 +57,13 @@
     <button type="button" class="btn btn-primary" id="returnbutton" style="position: relative;">Return to full extent</button>
     
     <!-- Search container -->
-    <div class='map-search-container'>
+    <div class='map-search-container' id='map-search-container'>
         <label class="option-label" for="geocoder"><b>Search for location</b></label>
         <div id="geocoder" class="geocoder"></div>
     </div>
 
     <!-- Filter by opening act -->
-    <div class='opener-dropdown'>
+    <div class='opener-dropdown' id='opener-dropdown'>
         <label class="option-label" for="openers"><b>Filter by opening act</b></label>
         <select name="openers" id="openers">
             <option value="" disabled selected>Select an artist...</option>
@@ -87,6 +87,11 @@
         </select>
     </div>
 </div>
+
+<div class='show-info' id='show-info'>
+    <p> FILLER WORDS - USE JAVASCRIPT TO ADD SHOW DATA FROM GEOJSON </p>    
+</div>
+
 
     <!-- Script.js -->
     <script src="script.js"></script>

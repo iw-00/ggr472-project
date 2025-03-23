@@ -153,6 +153,12 @@ map.on("click", "show-pts", (e) => {
         startRotation(map);
 
         map.setStyle('mapbox://styles/stanfordchang/cm8gipc43015j01s52jfo9p21'); // Change map style (Mapbox Standard)
+      
+       // Load sources and layers that were reset after style is changed
+        map.once('style.load', () => {
+            visualizeData();
+  });
+
       });
     }
     }, 0);
@@ -235,3 +241,34 @@ document.getElementById("openers").addEventListener("change",(e) => {
     );
 }
 });
+
+/*---------------------------
+SET VISIBILITY OF CONTAINERS AT 3D ZOOM AND PITCH 
+-----------------------------*/
+
+function checkVisibility() {
+  const zoomLevel = map.getZoom();
+  const pitchLevel = map.getPitch();
+
+  const searchContainer = document.getElementById('search-container');
+  const openerDropdown = document.getElementById('opener-dropdown')
+  const showInformation = document.getElementById('show-info');
+
+  if (zoomLevel >= 17 && pitchLevel >=65) {
+    searchContainer.style.display = 'hidden';
+    openerDropdown.style.display = 'hidden';
+    showInformation.style.display = 'visible';
+  } else {
+    searchContainer.style.display = 'visible';
+    openerDropdown.style.display = 'visible';
+    showInformation.style.display = 'hidden';
+  }
+}
+
+map.on('zoom', checkVisibility);
+map.on('pitch', checkVisibility);
+
+map.on('load', () => {
+  checkVisibility();
+  visualizeData();
+})
