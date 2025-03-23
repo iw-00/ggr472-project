@@ -3,14 +3,12 @@ INITIALIZE MAP
 ---------------------------*/
 
 mapboxgl.accessToken = "pk.eyJ1Ijoic3RhbmZvcmRjaGFuZyIsImEiOiJjbTVvZHBxOHUwa3p2Mmxwbm90N2I0MzZqIn0.JfQLnEhITEAZl2kHoQP7rA"; // Mapbox access token
-// mapboxgl.accessToken = "pk.eyJ1IjoiaXcwMCIsImEiOiJjbTV2aXFlajYwMjZmMmtvbWtrMGRhd3lkIn0.DbEVxhgWv4ANYwpIpCc4iA";
 
 // Create map
 const map = new mapboxgl.Map({
     container: 'map',
     projection: 'mercator',
-    style: "mapbox://styles/stanfordchang/cm8gipc43015j01s52jfo9p21", // custom style URL
-    // style: "mapbox://styles/iw00/cm7v16zql01tr01qo6qk93q42",
+    style: "mapbox://styles/stanfordchang/cm8kr9l8600rp01ry7b712acl", // custom style URL (Monochrome)
     center: [2.340180, 26.389773], // starting location
     zoom: 1.0 // starting zoom level
 });
@@ -35,16 +33,15 @@ document.getElementById("geocoder").appendChild(geocoder.onAdd(map));
 /*---------------------------
 VISUALIZE DATA
 ---------------------------*/
-map.on("load", () => {
+function visualizeData() {
+    // Add source for show data
+    map.addSource("show-data", {
+        type: "geojson",
+        data: "https://raw.githubusercontent.com/iw-00/ggr472-project/refs/heads/main/data/shows.geojson"
+    });
 
-  // Add source for show data
-  map.addSource("show-data", {
-      type: "geojson",
-      data: "https://raw.githubusercontent.com/iw-00/ggr472-project/refs/heads/main/data/shows.geojson"
-  });
-
-  // Add stadium points to map
-  map.addLayer({
+    // Add stadium points to map
+    map.addLayer({
         id: "show-pts",
         type: "circle",
         source: "show-data",
@@ -59,9 +56,13 @@ map.on("load", () => {
               4, 6,
               5, 7
             ],
-            "circle-color": "#ff0000"
+            "circle-color": "#5B1166"
         }
     });
+}
+
+map.on("load", () => {
+    visualizeData()
 });
 
 /*---------------------------
@@ -77,6 +78,24 @@ document.getElementById('returnbutton').addEventListener('click', () => {
       bearing: 0, // Reset to original rotation
       essential: true
     });
+
+    // Re-enable user interaction
+    map.scrollZoom.enable();
+    map.boxZoom.enable();
+    map.dragPan.enable();
+    map.dragRotate.enable();
+    map.keyboard.enable();
+    map.doubleClickZoom.enable();
+    map.touchZoomRotate.enable();
+
+    map.setStyle('mapbox://styles/stanfordchang/cm8kr9l8600rp01ry7b712acl'); // Change map style back to default
+
+    // Load sources and layers that were reset after style is changed
+    map.once('style.load', () => {
+        visualizeData();
+    });
+
+    stopRotation(); // Cancel rotation animation
 });
 
 /*---------------------------
@@ -126,10 +145,71 @@ map.on("click", "show-pts", (e) => {
         // Jump to the stadium
         map.jumpTo({
           center: coordinates,
-          zoom: 16.7, // Zoom in to the stadium
-          pitch: 60 // Pitch the camera to show 3D buildings
+          zoom: 17, // Zoom in to the stadium
+          pitch: 65 // Pitch the camera to show 3D buildings
         });
+
+        // Start continuous rotation animation
+        startRotation(map);
+
+        map.setStyle('mapbox://styles/stanfordchang/cm8gipc43015j01s52jfo9p21'); // Change map style (Mapbox Standard)
       });
     }
     }, 0);
 });
+
+/*---------------------------
+FUNCTION: ROTATE MAP
+-----------------------------*/
+
+let rotationTimeout = null;
+
+// Function to start rotation
+function startRotation() {
+
+    // Disable user interaction
+    map.scrollZoom.disable();
+    map.boxZoom.disable();
+    map.dragPan.disable();
+    map.dragRotate.disable();
+    map.keyboard.disable();
+    map.doubleClickZoom.disable();
+    map.touchZoomRotate.disable();
+
+    // Rotate function
+    function rotate() {
+      const currentZoom = map.getZoom(); // Check current zoom level
+      
+      // Only continue rotating if zoom level is equal or greater than 17
+      if (currentZoom >= 17) {
+          const currentBearing = map.getBearing();
+          
+          map.easeTo({
+            bearing: currentBearing + 120, // Rotate 120 degrees
+            duration: 5000, // For 5 seconds
+            easing: (t) => t // Linear easing
+          });
+
+          map.setLayoutProperty('show-pts', 'visibility', 'none') // Hide stadium points
+        
+          rotationTimeout = setTimeout(rotate, 5000); // Start next segment when animation is done
+          
+        } 
+        else {
+          stopRotation(map); // Stop rotation
+        }
+    }
+    
+    // Run rotate function again
+    rotate();
+}
+
+// Function to stop rotation
+function stopRotation() {
+    if (rotationTimeout) {
+      clearTimeout(rotationTimeout);
+      rotationTimeout = null;
+    }
+    
+    map.stop(); // Stop any active camera animations
+}
