@@ -56,3 +56,16 @@
     font-size: 0.8rem;
     padding: 4px 10px;
 }
+
+.opener-dropdown {
+    position: relative;
+    /* background: rgba(177, 128, 206, 0.5); */
+    background: rgba(0, 0, 0);
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    overflow: visible; /* does not clip overflow */
+}

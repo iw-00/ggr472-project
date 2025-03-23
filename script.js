@@ -213,3 +213,25 @@ function stopRotation() {
     
     map.stop(); // Stop any active camera animations
 }
+
+/*---------------------------
+FILTER BY OPENING ACT
+-----------------------------*/
+
+let selectedOpener;
+
+document.getElementById("openers").addEventListener("change",(e) => {   
+  selectedOpener = document.getElementById("openers").value; // get selected layer value
+
+  console.log(selectedOpener);
+
+  if (selectedOpener == 'All') {
+    map.setFilter(
+        'show-pts', null); // show all points
+} else {
+    map.setFilter(
+        'show-pts',
+        ['in', selectedOpener, ['get', 'opener']] // return points with opener that matches dropdown selection
+    );
+}
+});
