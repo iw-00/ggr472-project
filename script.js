@@ -234,13 +234,35 @@ document.getElementById("openers").addEventListener("change",(e) => {
   if (selectedOpener == 'All') {
     map.setFilter(
         'show-pts', null); // show all points
-} else {
+  } else {
     map.setFilter(
         'show-pts',
         ['in', selectedOpener, ['get', 'opener']] // return points with opener that matches dropdown selection
     );
-}
+  }
 });
+
+/*---------------------------
+SEARCH BY SURPRISE SONG
+-----------------------------*/
+
+// Search bar functionality
+// function myFunction() {
+//   var input, filter, ul, li, a, i, txtValue;
+//   input = document.getElementById("myInput");
+//   filter = input.value.toUpperCase();
+//   ul = document.getElementById("myUL");
+//   li = ul.getElementsByTagName("li");
+//   for (i = 0; i < li.length; i++) {
+//       a = li[i].getElementsByTagName("a")[0];
+//       txtValue = a.textContent || a.innerText;
+//       if (filter && txtValue.toUpperCase().indexOf(filter) > -1) {
+//           li[i].style.display = "";
+//       } else {
+//           li[i].style.display = "none";
+//       }
+//   }
+// }
 
 /*---------------------------
 SET VISIBILITY OF CONTAINERS AT 3D ZOOM AND PITCH 
