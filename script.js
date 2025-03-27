@@ -227,7 +227,7 @@ FILTER BY OPENING ACT
 let selectedOpener;
 
 document.getElementById("openers").addEventListener("change",(e) => {   
-  selectedOpener = document.getElementById("openers").value; // get selected layer value
+  selectedOpener = document.getElementById("openers").value; // get selected opener value
 
   console.log(selectedOpener);
 
@@ -246,6 +246,35 @@ document.getElementById("openers").addEventListener("change",(e) => {
 SEARCH BY SURPRISE SONG
 -----------------------------*/
 
+// Add search functionality to dropdown.
+$(document).ready(function() {
+  $('.js-example-basic-single').select2();
+});
+
+$(function(){
+  // turn the element to select2 select style
+  $('.js-example-basic-single').select2({
+    placeholder: "Search for a song..."
+  });
+
+  $('.js-example-basic-single').on('change', function() {
+    var selectedSong = $(".js-example-basic-single option:selected").text();
+    $("#test").val(selectedSong);
+    console.log(selectedSong);
+
+    if (selectedSong == 'All') {
+      map.setFilter(
+          'show-pts', null); // show all points
+    } else {
+      map.setFilter(
+          'show-pts',
+          ["any", ['in', selectedSong, ['get', 'guitar-surprise-song']], ['in', selectedSong, ['get', 'piano-surprise-song']]] // return points with song that matches selection
+      );
+    }
+
+  })
+});
+
 // Search bar functionality
 // function myFunction() {
 //   var input, filter, ul, li, a, i, txtValue;
@@ -263,6 +292,7 @@ SEARCH BY SURPRISE SONG
 //       }
 //   }
 // }
+
 
 /*---------------------------
 SET VISIBILITY OF CONTAINERS AT 3D ZOOM AND PITCH 

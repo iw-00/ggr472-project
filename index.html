@@ -26,6 +26,13 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Select2 for dropdown -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Select2 -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 
 <body>
@@ -88,15 +95,216 @@
     </div>
 
     <!-- Search for surprise song -->
-    <!-- <div class='song-search' id='song-search'>
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a Surprise Song.." title="Type in a song">
+    <div class='song-search' id='song-search'>
+        <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a Surprise Song.." title="Type in a song">
 
         <ul id="myUL">
             <li><a href="#">Maroon</a></li>
             <li><a href="#">Carolina</a></li>
             <li><a href="#">'Slut!'</a></li>
-        </ul>
-    </div> -->
+        </ul> -->
+        <label class="option-label" for="songs"><b>Search for a Surprise Song</b></label>
+        <select class="js-example-basic-single" name="songs" id = songs>
+            <option value="" disabled selected>Search for a song...</option>
+            <option value="All">All</option>
+            <option value="The 1">The 1</option>
+            <option value="A Perfectly Good Heart">A Perfectly Good Heart</option>
+            <option value="A Place in This World">A Place in This World</option>
+            <option value="Afterglow">Afterglow</option>
+            <option value="The Albatross">The Albatross</option>
+            <option value="The Alchemy">The Alchemy</option>
+            <option value="All of the Girls You Loved Before">All of the Girls You Loved Before</option>
+            <option value="All You Had to Do Was Stay">All You Had to Do Was Stay</option>
+            <option value="The Archer">The Archer</option>
+            <option value="August">August</option>
+            <option value="Babe">Babe</option>
+            <option value="Back to December">Back to December</option>
+            <option value="Begin Again">Begin Again</option>
+            <option value="The Best Day">The Best Day</option>
+            <option value="Better Man">Better Man</option>
+            <option value="Better than Revenge">Better than Revenge</option>
+            <option value="Bigger Than the Whole Sky">Bigger Than the Whole Sky</option>
+            <option value="The Black Dog">The Black Dog</option>
+            <option value="The Bolter">The Bolter</option>
+            <option value="Breathe">Breathe</option>
+            <option value="Call It What You Want">Call It What You Want</option>
+            <option value="Carolina">Carolina</option>
+            <option value="Cassandra">Cassandra</option>
+            <option value="Castles Crumbling">Castles Crumbling</option>
+            <option value="Change">Change</option>
+            <option value="Chloe or Sam or Sophia or Marcus">Chloe or Sam or Sophia or Marcus</option>
+            <option value="Clara Bow">Clara Bow</option>
+            <option value="Clean">Clean</option>
+            <option value="Closure">Closure</option>
+            <option value="Cold as You">Cold as You</option>
+            <option value="Come Back... Be Here">Come Back... Be Here</option>
+            <option value="Come In with the Rain">Come In with the Rain</option>
+            <option value="Coney Island">Coney Island</option>
+            <option value="Cornelia Street">Cornelia Street</option>
+            <option value="Cowboy like Me">Cowboy like Me</option>
+            <option value="Crazier">Crazier</option>
+            <option value="Dancing with Our Hands Tied">Dancing with Our Hands Tied</option>
+            <option value="Daylight">Daylight</option>
+            <option value="Dear John">Dear John</option>
+            <option value="Dear Reader">Dear Reader</option>
+            <option value="Death by a Thousand Cuts">Death by a Thousand Cuts</option>
+            <option value="Don't You">Don't You</option>
+            <option value="Dorothea">Dorothea</option>
+            <option value="Dress">Dress</option>
+            <option value="Electric Touch">Electric Touch</option>
+            <option value="End Game">End Game</option>
+            <option value="Epiphany">Epiphany</option>
+            <option value="Espresso">Espresso</option>
+            <option value="Evermore">Evermore</option>
+            <option value="Everything Has Changed">Everything Has Changed</option>
+            <option value="Exile">Exile</option>
+            <option value="Eyes Open">Eyes Open</option>
+            <option value="False God">False God</option>
+            <option value="Fifteen">Fifteen</option>
+            <option value="Foolish One">Foolish One</option>
+            <option value="Forever & Always">Forever & Always</option>
+            <option value="Fresh Out the Slammer">Fresh Out the Slammer</option>
+            <option value="Getaway Car">Getaway Car</option>
+            <option value="Glitch">Glitch</option>
+            <option value="Gold Rush">Gold Rush</option>
+            <option value="Gorgeous">Gorgeous</option>
+            <option value="The Great War">The Great War</option>
+            <option value="Guilty as Sin?">Guilty as Sin?</option>
+            <option value="Happiness">Happiness</option>
+            <option value="Haunted">Haunted</option>
+            <option value="Hey Stephen">Hey Stephen</option>
+            <option value="High Infidelity">High Infidelity</option>
+            <option value="Hits Different">Hits Different</option>
+            <option value="Hoax">Hoax</option>
+            <option value="Holy Ground">Holy Ground</option>
+            <option value="How Did It End?">How Did It End?</option>
+            <option value="How You Get the Girl">How You Get the Girl</option>
+            <option value="I Almost Do">I Almost Do</option>
+            <option value="I Bet You Think About Me">I Bet You Think About Me</option>
+            <option value="I Can Fix Him (No Really I Can)">I Can Fix Him (No Really I Can)</option>
+            <option value="I Can See You">I Can See You</option>
+            <option value="I Did Something Bad">I Did Something Bad</option>
+            <option value="I Don't Wanna Live Forever">I Don't Wanna Live Forever</option>
+            <option value="I Forgot That You Existed">I Forgot That You Existed</option>
+            <option value="I Hate It Here">I Hate It Here</option>
+            <option value="I Know Places">I Know Places</option>
+            <option value="I Look in People's Windows">I Look in People's Windows</option>
+            <option value="I Love You, I'm Sorry">I Love You, I'm Sorry</option>
+            <option value="I Think He Knows">I Think He Knows</option>
+            <option value="I Wish You Would">I Wish You Would</option>
+            <option value="I'm Only Me When I'm with You">I'm Only Me When I'm with You</option>
+            <option value="If This Was a Movie">If This Was a Movie</option>
+            <option value="Imgonnagetyouback">Imgonnagetyouback</option>
+            <option value="Innocent">Innocent</option>
+            <option value="Invisible">Invisible</option>
+            <option value="Invisible String">Invisible String</option>
+            <option value="Is it Over Now?">Is it Over Now?</option>
+            <option value="It's Nice to Have a Friend">It's Nice to Have a Friend</option>
+            <option value="It's Time to Go">It's Time to Go</option>
+            <option value="Ivy">Ivy</option>
+            <option value="Jump then Fall">Jump then Fall</option>
+            <option value="King of My Heart">King of My Heart</option>
+            <option value="Labyrinth">Labyrinth</option>
+            <option value="The Lakes">The Lakes</option>
+            <option value="The Last Great American Dynasty">The Last Great American Dynasty</option>
+            <option value="Last Kiss">Last Kiss</option>
+            <option value="The Last Time">The Last Time</option>
+            <option value="Loml">Loml</option>
+            <option value="London Boy">London Boy</option>
+            <option value="Long Live">Long Live</option>
+            <option value="Long Story Short">Long Story Short</option>
+            <option value="The Lucky One">The Lucky One</option>
+            <option value="Mad Woman">Mad Woman</option>
+            <option value="The Manuscript">The Manuscript</option>
+            <option value="Maroon">Maroon</option>
+            <option value="Mary's Song (Oh My My My)">Mary's Song (Oh My My My)</option>
+            <option value="Me!">Me!</option>
+            <option value="Mean">Mean</option>
+            <option value="Message in a Bottle">Message in a Bottle</option>
+            <option value="Mine">Mine</option>
+            <option value="Mirrorball">Mirrorball</option>
+            <option value="The Moment I Knew">The Moment I Knew</option>
+            <option value="Mr. Perfectly Fine">Mr. Perfectly Fine</option>
+            <option value="My Boy Only Breaks His Favorite Toys">My Boy Only Breaks His Favorite Toys</option>
+            <option value="Never Grow Up">Never Grow Up</option>
+            <option value="New Romantics">New Romantics</option>
+            <option value="New Year's Day">New Year's Day</option>
+            <option value="No Body, No Crime">No Body, No Crime</option>
+            <option value="Nothing New">Nothing New</option>
+            <option value="Now That We Don't Talk">Now That We Don't Talk</option>
+            <option value="The Other Side of the Door">The Other Side of the Door</option>
+            <option value="Our Song">Our Song</option>
+            <option value="Ours">Ours</option>
+            <option value="Out of the Woods">Out of the Woods</option>
+            <option value="The Outside">The Outside</option>
+            <option value="Paper Rings">Paper Rings</option>
+            <option value="Paris">Paris</option>
+            <option value="Peace">Peace</option>
+            <option value="Peter">Peter</option>
+            <option value="Picture to Burn">Picture to Burn</option>
+            <option value="Please Please Please">Please Please Please</option>
+            <option value="The Prophecy">The Prophecy</option>
+            <option value="Question...?">Question...?</option>
+            <option value="Red">Red</option>
+            <option value="Right Where You Left Me">Right Where You Left Me</option>
+            <option value="Robin">Robin</option>
+            <option value="Run">Run</option>
+            <option value="Sad Beautiful Tragic">Sad Beautiful Tragic</option>
+            <option value="Safe & Sound">Safe & Sound</option>
+            <option value="Say Don't Go">Say Don't Go</option>
+            <option value="Seven">Seven</option>
+            <option value="Should've Said No">Should've Said No</option>
+            <option value="'Slut!'">'Slut!'</option>
+            <option value="Snow on the Beach">Snow on the Beach</option>
+            <option value="So High School">So High School</option>
+            <option value="So it Goes...">So it Goes...</option>
+            <option value="So Long, London">So Long, London</option>
+            <option value="Sparks Fly">Sparks Fly</option>
+            <option value="Speak Now">Speak Now</option>
+            <option value="Starlight">Starlight</option>
+            <option value="State of Grace">State of Grace</option>
+            <option value="Stay Beautiful">Stay Beautiful</option>
+            <option value="Stay Stay Stay">Stay Stay Stay</option>
+            <option value="The Story of Us">The Story of Us</option>
+            <option value="Suburban Legends">Suburban Legends</option>
+            <option value="Superman">Superman</option>
+            <option value="Superstar">Superstar</option>
+            <option value="Sweet Nothing">Sweet Nothing</option>
+            <option value="Sweeter than Fiction">Sweeter than Fiction</option>
+            <option value="Teardrops on My Guitar">Teardrops on My Guitar</option>
+            <option value="Tell Me Why">Tell Me Why</option>
+            <option value="Thank You Aimee">Thank You Aimee</option>
+            <option value="Thinking Out Loud">Thinking Out Loud</option>
+            <option value="This Is Me Trying">This Is Me Trying</option>
+            <option value="This Is What You Came For">This Is What You Came For</option>
+            <option value="This Is Why We Can't Have Nice Things">This Is Why We Can't Have Nice Things</option>
+            <option value="This Love">This Love</option>
+            <option value="Tied Together with a Smile">Tied Together with a Smile</option>
+            <option value="Tim McGraw">Tim McGraw</option>
+            <option value="Timeless">Timeless</option>
+            <option value="'Tis the Damn Season">'Tis the Damn Season</option>
+            <option value="Today Was a Fairytale">Today Was a Fairytale</option>
+            <option value="The Tortured Poets Department">The Tortured Poets Department</option>
+            <option value="Treacherous">Treacherous</option>
+            <option value="Untouchable">Untouchable</option>
+            <option value="Us">Us</option>
+            <option value="The Very First Night">The Very First Night</option>
+            <option value="The Way I Loved You">The Way I Loved You</option>
+            <option value="We Were Happy">We Were Happy</option>
+            <option value="Welcome to New York">Welcome to New York</option>
+            <option value="When Emma Falls in Love">When Emma Falls in Love</option>
+            <option value="White Horse">White Horse</option>
+            <option value="Wonderland">Wonderland</option>
+            <option value="Would've, Could've, Should've">Would've, Could've, Should've</option>
+            <option value="You All Over Me">You All Over Me</option>
+            <option value="You Are in Love">You Are in Love</option>
+            <option value="You're Losing Me">You're Losing Me</option>
+            <option value="You're Not Sorry">You're Not Sorry</option>
+            <option value="You're on Your Own, Kid">You're on Your Own, Kid</option>            
+        </select>
+
+    </div>
+
 
 </div>
 
