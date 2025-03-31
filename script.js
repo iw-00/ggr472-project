@@ -268,7 +268,7 @@ $(function(){
     } else {
       map.setFilter(
           'show-pts',
-          ["any", ['in', selectedSong, ['get', 'guitar-surprise-song']], ['in', selectedSong, ['get', 'piano-surprise-song']]] // return points with song that matches selection
+          ["any", ['in', selectedSong, ['get', 'guitar-surprise-song']], ['in', selectedSong, ['get', 'piano-surprise-song']], ['in', selectedSong, ['get', 'mashup-songs']]] // return points with song that matches selection
       );
     }
 

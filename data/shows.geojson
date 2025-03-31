@@ -516,6 +516,7 @@
           "shows": 3,
           "guitar-surprise-song": ["The Very First Night", "Is it Over Now? / Out of the Woods", "Better than Revenge"],
           "piano-surprise-song": ["Labyrinth", "End Game", "'Slut!'"],
+          "mashup-songs": ["Is it Over Now?", "Out of the Woods"],
           "instagram": ["https://www.instagram.com/p/CzmFt42vd2o/"],
           "lat": -34.54531318363597,
           "lng": -58.44972256218034
@@ -611,6 +612,7 @@
           "shows": 3,
           "guitar-surprise-song": ["Red", "Getaway Car / August / The Other Side of the Door", "Come Back... Be Here / Daylight"],
           "piano-surprise-song": ["You're Losing Me", "This Is Me Trying", "Teardrops on My Guitar"],
+          "mashup-songs": ["Getaway Car", "August", "The Other Side of the Door", "Come Back... Be Here", "Daylight"],
           "instagram": ["https://www.instagram.com/p/C3gJcnSOkNQ/"],
           "lat": -37.81997714148464,
           "lng": 144.98346373471486
@@ -635,6 +637,7 @@
           "shows": 4,
           "guitar-surprise-song": ["How You Get the Girl", "Should've Said No / You're Not Sorry", "Is It Over Now? / I Wish You Would", "Would've, Could've, Should've / Ivy"],
           "piano-surprise-song": ["White Horse / Coney Island", "New Year's Day / Peace", "Haunted / Exile", "Forever & Always / Maroon"],
+          "mashup-songs": ["How You Get the Girl", "Should've Said No", "You're Not Sorry", "Is It Over Now?", "I Wish You Would", "Would've, Could've, Should've", "Ivy", "White Horse", "Coney Island", "New Year's Day", "Peace", "Haunted", "Exile", "Forever & Always", "Maroon"],
           "instagram": ["https://www.instagram.com/p/C35HpNEu0wL/"],
           "lat": -33.847110943298105,
           "lng": 151.06338979784613
@@ -659,6 +662,7 @@
           "shows": 6,
           "guitar-surprise-song": ["Mine / Starlight", "Long Story Short / The Story of Us", "Foolish One / Tell Me Why", "Death by a Thousand Cuts / Babe", "Sparks Fly / Gold Rush", "Tim McGraw / Cowboy like Me"],
           "piano-surprise-song": ["I Don't Wanna Live Forever / Dress", "Clean / Evermore", "This Love / Call It What You Want", "Fifteen / You're on Your Own, Kid", "False God / 'Slut!'", "Mirrorball / Epiphany"],
+          "mashup-songs": ["Mine", "Starlight", "Long Story Short", "The Story of Us", "Foolish One", "Tell Me Why", "Death by a Thousand Cuts", "Babe", "Sparks Fly", "Gold Rush", "Tim McGraw", "Cowboy like Me", "I Don't Wanna Live Forever", "Dress", "Clean", "Evermore", "This Love", "Call It What You Want", "Fifteen", "You're on Your Own, Kid", "False God", "'Slut!'", "Mirrorball", "Epiphany"],
           "instagram": ["https://www.instagram.com/p/C4WNESVOvf3/"],
           "lat": 1.304456078803753,
           "lng": 103.8743044991171
@@ -682,6 +686,7 @@
           "shows": 4,
           "guitar-surprise-song": ["Paris", "Is it Over Now? / Out of the Woods", "Hey Stephen", "The Alchemy / Treacherous"],
           "piano-surprise-song": ["Loml", "My Boy Only Breaks His Favorite Toys", "Maroon", "Begin Again / Paris"],
+          "mashup-songs": ["Paris", "Is it Over Now?", "Out of the Woods", "Hey Stephen", "The Alchemy", "Treacherous", "Loml", "My Boy Only Breaks His Favorite Toys", "Maroon", "Begin Again", "Paris"],
           "instagram": ["https://www.instagram.com/p/C64iubPO92m/"],
           "lat": 48.895645755632586,
           "lng": 2.22968265437288
@@ -706,6 +711,7 @@
           "shows": 3, 
           "guitar-surprise-song": ["I Think He Knows / Gorgeous", "Guilty as Sin?", "Message in a Bottle / How You Get the Girl / New Romantics"],
           "piano-surprise-song": ["Peter", "Say Don't Go / Welcome to New York / Clean", "How Did It End?"],
+          "mashup-songs": ["I Think He Knows", "Gorgeous", "Guilty as Sin?", "Message in a Bottle", "How You Get the Girl", "New Romantics", "Peter", "Say Don't Go", "Welcome to New York", "Clean", "How Did It End?"],
           "instagram": ["https://www.instagram.com/p/C7M5aWQu8J1/"],
           "lat": 59.37265939075607,
           "lng": 18.00047856695997
@@ -730,6 +736,7 @@
           "shows": 2,
           "guitar-surprise-song": ["Come Back... Be Here / The Way I Loved You / The Other Side of the Door", "The Tortured Poets Department / Now That We Don't Talk"],
           "piano-surprise-song": ["Fresh Out the Slammer / High Infidelity", "You're on Your Own, Kid / Long Live"],
+          "mashup-songs": ["Come Back... Be Here", "The Way I Loved You", "The Other Side of the Door", "The Tortured Poets Department", "Now That We Don't Talk", "Fresh Out the Slammer", "High Infidelity", "You're on Your Own, Kid", "Long Live"],
           "instagram": ["https://www.instagram.com/p/C7cUr6zu-OA/"],
           "lat": 38.752696661822796,
           "lng": -9.184682139926196
@@ -753,6 +760,7 @@
           "shows": 2,
           "guitar-surprise-song": ["Sparks Fly / I Can Fix Him (No Really I Can)", "Our Song / Jump then Fall"],
           "piano-surprise-song": ["I Look in People's Windows / Snow on the Beach", "King of My Heart"],
+          "mashup-songs": ["Sparks Fly", "I Can Fix Him (No Really I Can)", "Our Song", "Jump then Fall", "I Look in People's Windows", "Snow on the Beach", "King of My Heart"],
           "instagram": ["https://www.instagram.com/p/C7ob1LhOFQj/"],
           "lat": 40.45306170097737,
           "lng": -3.6883507731682528
@@ -777,6 +785,7 @@
           "shows": 2, 
           "guitar-surprise-song": ["The Prophecy / Long Story Short", "Glitch / Everything Has Changed"],
           "piano-surprise-song": ["Fifteen / You're on Your Own, Kid", "Chloe or Sam or Sophia or Marcus"],
+          "mashup-songs": ["The Prophecy", "Long Story Short", "Glitch", "Everything Has Changed", "Fifteen", "You're on Your Own, Kid", "Chloe or Sam or Sophia or Marcus"],
           "instagram": ["https://www.instagram.com/p/C7zOqupuXZR/"],
           "lat": 45.76521495742506,
           "lng": 4.982048556176977
@@ -801,6 +810,7 @@
           "shows": 3,
           "guitar-surprise-song": ["Would've, Could've, Should've / I Know Places", "The Bolter / Getaway Car", "It's Nice to Have a Friend / Dorothea"],
           "piano-surprise-song": ["'Tis the Damn Season / Daylight", "All of the Girls You Loved Before / Crazier", "Haunted / Exile"],
+          "mashup-songs": ["Would've, Could've, Should've", "I Know Places", "The Bolter", "Getaway Car", "It's Nice to Have a Friend", "Dorothea", "'Tis the Damn Season", "Daylight", "All of the Girls You Loved Before", "Crazier", "Haunted", "Exile"],
           "instagram": ["https://www.instagram.com/p/C8CHiocu4n1/"],
           "lat": 55.94224191955368,
           "lng": -3.2410083178784816
@@ -825,6 +835,7 @@
           "shows": 3,
           "guitar-surprise-song": ["I Can See You / Mine", "This Is What You Came For / Gold Rush", "Carolina / No Body, No Crime"],
           "piano-surprise-song": ["Cornelia Street / Maroon", "The Great War / You're Losing Me", "The Manuscript / Red"],
+          "mashup-songs": ["I Can See You", "Mine", "This Is What You Came For", "Gold Rush", "Carolina", "No Body, No Crime", "Cornelia Street", "Maroon", "The Great War", "You're Losing Me", "The Manuscript", "Red"],
           "instagram": ["https://www.instagram.com/p/C8R17HiuH7o/"],
           "lat": 53.43087545880084,
           "lng": -2.96076495628688
@@ -849,6 +860,7 @@
           "shows": 1,
           "guitar-surprise-song": ["I Forgot That You Existed / This Is Why We Can't Have Nice Things"],
           "piano-surprise-song": ["I Hate It Here / The Lakes"],
+          "mashup-songs": ["I Forgot That You Existed", "This Is Why We Can't Have Nice Things", "I Hate It Here", "The Lakes"],
           "instagram": ["https://www.instagram.com/p/C8b4KnYMoOv/"],
           "lat": 51.4782954999184,
           "lng": -3.1825879365234186
@@ -873,6 +885,7 @@
           "shows": 8,
           "guitar-surprise-song": ["Hits Different / Death by a Thousand Cuts", "Thank You Aimee / Mean", "Us", "Everything Has Changed / End Game / Thinking Out Loud", "London Boy", "I Did Something Bad", "Long Live / Change", "Death by a Thousand Cuts / Getaway Car"],
           "piano-surprise-song": ["The Black Dog / Come Back... Be Here / Maroon", "Castles Crumbling", "Out of the Woods / Is it Over Now? / Clean", "King of My Heart / The Alchemy", "Dear John / Sad Beautiful Tragic", "My Boy Only Breaks His Favorite Toys / Coney Island", "The Archer / You're on Your Own, Kid", "So Long, London"],
+          "mashup-songs": ["Hits Different", "Death by a Thousand Cuts", "Thank You Aimee", "Mean", "Us", "Everything Has Changed", "End Game", "Thinking Out Loud", "London Boy", "I Did Something Bad", "Long Live", "Change", "Death by a Thousand Cuts", "Getaway Car", "The Black Dog", "Come Back... Be Here", "Maroon", "Castles Crumbling", "Out of the Woods", "Is it Over Now?", "Clean", "King of My Heart", "The Alchemy", "Dear John", "Sad Beautiful Tragic", "My Boy Only Breaks His Favorite Toys", "Coney Island", "The Archer", "You're on Your Own, Kid", "So Long, London"],
           "instagram": ["https://www.instagram.com/p/C-8sKGYymIC/", "https://www.instagram.com/p/C8myZeBOoV6/"],
           "lat": 51.55595455407689,
           "lng": -0.2795869343007098
@@ -897,6 +910,7 @@
           "shows": 3,
           "guitar-surprise-song": ["State of Grace / You're on Your Own, Kid", "The Albatross / Dancing with Our Hands Tied", "Clara Bow / The Lucky One"],
           "piano-surprise-song": ["Sweet Nothing / Hoax", "This Love / Ours", "You're on Your Own, Kid"],
+          "mashup-songs": ["State of Grace", "You're on Your Own, Kid", "The Albatross", "Dancing with Our Hands Tied", "Clara Bow", "The Lucky One", "Sweet Nothing", "Hoax", "This Love", "Ours"],
           "instagram": ["https://www.instagram.com/p/C87F5ZGOefC/"],
           "lat": 53.33523366474381,
           "lng": -6.22828929537107
@@ -921,6 +935,7 @@
           "shows": 3,
           "guitar-surprise-song": ["Guilty as Sin? / Untouchable", "Imgonnagetyouback / Dress", "Sweeter than Fiction / Holy Ground"],
           "piano-surprise-song": ["The Archer / Question...?", "You Are in Love / Cowboy like Me", "Mary's Song (Oh My My My) / So High School / Everything Has Changed"],
+          "mashup-songs": ["Guilty as Sin?", "Untouchable", "Imgonnagetyouback", "Dress", "Sweeter than Fiction", "Holy Ground", "The Archer", "Question...?", "You Are in Love", "Cowboy like Me", "Mary's Song (Oh My My My)", "So High School", "Everything Has Changed"],
           "instagram": ["https://www.instagram.com/p/C9ISoQEu9iH/"],
           "lat": 52.314331942849975,
           "lng": 4.941903307145509
@@ -945,6 +960,7 @@
           "shows": 2,
           "guitar-surprise-song": ["Right Where You Left Me / All You Had to Do Was Stay", "Closure / A Perfectly Good Heart"],
           "piano-surprise-song": ["Last Kiss / Sad Beautiful Tragic", "Robin / Never Grow Up"],
+          "mashup-songs": ["Right Where You Left Me", "All You Had to Do Was Stay", "Closure", "A Perfectly Good Heart", "Last Kiss", "Sad Beautiful Tragic", "Robin", "Never Grow Up"],
           "instagram": ["https://www.instagram.com/p/C9TB818B1Mt/"],
           "lat": 47.382788194642615,
           "lng": 8.503832771649826
@@ -969,6 +985,7 @@
           "shows": 2,
           "guitar-surprise-song": ["The 1 / Wonderland", "Mr. Perfectly Fine / Red"],
           "piano-surprise-song": ["I Almost Do / The Moment I Knew", "Getaway Car / Out of the Woods"],
+          "mashup-songs": ["The 1", "Wonderland", "Mr. Perfectly Fine", "Red", "I Almost Do", "The Moment I Knew", "Getaway Car", "Out of the Woods"],
           "instagram": ["https://www.instagram.com/p/C9c3Mo1uFd2/"],
           "lat": 45.47808795253803,
           "lng": 9.123942854792205
@@ -993,6 +1010,7 @@
           "shows": 3,
           "guitar-surprise-song": ["Superstar / Invisible String", "Speak Now / Hey Stephen", "Paper Rings / Stay Stay Stay"],
           "piano-surprise-song": ["'Slut!' / False God", "This Is Me Trying / Labyrinth", "It's Time to Go / Better Man"],
+          "mashup-songs": ["Superstar", "Invisible String", "Speak Now", "Hey Stephen", "Paper Rings", "Stay Stay Stay", "'Slut!'", "False God", "This Is Me Trying", "Labyrinth", "It's Time to Go", "Better Man"],
           "instagram": ["https://www.instagram.com/p/C9ppG8JvwjM/"],
           "lat": 51.554608071399855,
           "lng": 7.067592937418311
@@ -1017,6 +1035,7 @@
           "shows": 2,
           "guitar-surprise-song": ["Teardrops on My Guitar / The Last Time", "The Last Great American Dynasty / Run"],
           "piano-surprise-song": ["We Were Happy / Happiness", "Nothing New / Dear Reader"], 
+          "mashup-songs": ["Teardrops on My Guitar", "The Last Time", "The Last Great American Dynasty", "Run", "We Were Happy", "Happiness", "Nothing New", "Dear Reader"],
           "instagram": ["https://www.instagram.com/p/C92SRrvuqy_/"],
           "lat": 53.587181217302515,
           "lng": 9.898721637407846
@@ -1041,6 +1060,7 @@
           "shows": 2,
           "guitar-surprise-song": ["Fresh Out the Slammer / You Are in Love", "I Don't Wanna Live Forever / Imgonnagetyouback"],
           "piano-surprise-song": ["Ivy / Call It What You Want", "Loml / Don't You"],
+          "mashup-songs": ["Fresh Out the Slammer", "You Are in Love", "I Don't Wanna Live Forever", "Imgonnagetyouback", "Ivy", "Call It What You Want", "Loml", "Don't You"],
           "instagram": ["https://www.instagram.com/p/C-GD_KzOnGx/"],
           "lat": 52.51464916451846,
           "lng": 13.239594756441619
@@ -1064,7 +1084,8 @@
           "opener": ["Paramore"],
           "shows": 3,
           "guitar-surprise-song": ["Mirrorball / Clara Bow", "I Can Fix Him (No Really I Can) / I Can See You", "Today Was a Fairytale / I Think He Knows"],
-          "piano-surprise-song": ["Suburban Legends/ New Year's Day", "Red / Maroon", "The Black Dog / Exile"],
+          "piano-surprise-song": ["Suburban Legends / New Year's Day", "Red / Maroon", "The Black Dog / Exile"],
+          "mashup-songs": ["Mirrorball", "Clara Bow", "I Can Fix Him (No Really I Can)", "I Can See You", "Today Was a Fairytale", "I Think He Knows", "Suburban Legends", "New Year's Day", "Red", "Maroon", "The Black Dog", "Exile"],
           "instagram": ["https://www.instagram.com/p/C-VyDVMhrNH/"],
           "lat": 52.23964082044023,
           "lng": 21.045806751917127
@@ -1089,6 +1110,7 @@
           "shows": 3,
           "guitar-surprise-song": ["Tim McGraw / Timeless", "Should've Said No / I Did Something Bad", "Out of the Woods / All You Had to Do Was Stay"],
           "piano-surprise-song": ["This Is Me Trying / Daylight", "Loml / White Horse", "Mirrorball / Guilty as Sin?"],
+          "mashup-songs": ["Tim McGraw", "Timeless", "Should've Said No", "I Did Something Bad", "Out of the Woods", "All You Had to Do Was Stay", "This Is Me Trying", "Daylight", "Loml", "White Horse", "Mirrorball", "Guilty as Sin?"],
           "instagram": ["https://www.instagram.com/p/DBb599JyCH9/"],
           "lat": 39.7600879083231,
           "lng": -86.16377508078527
@@ -1113,6 +1135,7 @@
           "shows": 3,
           "guitar-surprise-song": ["Our Song / Call It What You Want", "Espresso / Is It Over Now? / Please Please Please", "Afterglow / Dress"],
           "piano-surprise-song": ["The Black Dog / Haunted", "Hits Different / Welcome to New York", "How You Get the Girl / Clean"],
+          "mashup-songs": ["Our Song", "Call It What You Want", "Espresso", "Is It Over Now?", "Please Please Please", "Afterglow", "Dress", "The Black Dog", "Haunted", "Hits Different", "Welcome to New York", "How You Get the Girl", "Clean"],
           "instagram": ["https://www.instagram.com/p/DBuaITCS5mL/"],
           "lat":  29.95105138339096,
           "lng": -90.0810889858167
@@ -1137,6 +1160,7 @@
           "shows": 3,
           "guitar-surprise-song": ["The Albatross / Holy Ground", "The Prophecy / This Love", "Cornelia Street / The Bolter"],
           "piano-surprise-song": ["Cold as You / Exile", "Maroon / Cowboy like Me", "Death by a Thousand Cuts / The Great War"],
+          "mashup-songs": ["The Albatross", "Holy Ground", "The Prophecy", "This Love", "Cornelia Street", "The Bolter", "Cold as You", "Exile", "Maroon", "Cowboy like Me", "Death by a Thousand Cuts", "The Great War"],
           "instagram": ["https://www.instagram.com/p/DB9p-9cykPB/"],
           "lat": 39.7600879083231,
           "lng": -86.16377508078527
@@ -1159,8 +1183,9 @@
           "dates": "November 14-16 & 21-23, 2024",
           "opener": ["Gracie Abrams"],
           "shows": 6,
-          "guitar-surprise-song": ["My Boy Only Breaks His Favorite Toys / This Is Why We Can't Have Nice Things", "I Don't Wanna Live Forever / Mine", "Us / Out of the Woods", "Mr. Perfectly Fine/ Better than Revenge", "Ours / The Last Great American Dynasty", "Sparks Fly / Message in a Bottle"],
+          "guitar-surprise-song": ["My Boy Only Breaks His Favorite Toys / This Is Why We Can't Have Nice Things", "I Don't Wanna Live Forever / Mine", "Us / Out of the Woods", "Mr. Perfectly Fine / Better than Revenge", "Ours / The Last Great American Dynasty", "Sparks Fly / Message in a Bottle"],
           "piano-surprise-song": ["False God / 'Tis the Damn Season", "Evermore / Peter", "You're on Your Own, Kid / Long Story Short", "State of Grace / Labyrinth", "Cassandra / Mad Woman / I Did Something Bad", "You're Losing Me / How Did It End?"],
+          "mashup-songs": ["My Boy Only Breaks His Favorite Toys", "This Is Why We Can't Have Nice Things", "I Don't Wanna Live Forever", "Mine", "Us", "Out of the Woods", "Mr. Perfectly Fine”, “Better than Revenge", "Ours", "The Last Great American Dynasty", "Sparks Fly", "Message in a Bottle", "False God", "'Tis the Damn Season", "Evermore", "Peter", "You're on Your Own, Kid", "Long Story Short", "State of Grace", "Labyrinth", "Cassandra", "Mad Woman", "I Did Something Bad", "You're Losing Me", "How Did It End?"],
           "instagram": ["https://www.instagram.com/p/DC1r0NKOqPQ/"],
           "lat": 43.6416111549662,
           "lng": -79.38917731458956
@@ -1185,6 +1210,7 @@
           "shows": 3,
           "guitar-surprise-song": ["Haunted / Wonderland", "I Love You, I'm Sorry / Last Kiss", "A Place in This World / New Romantics"],
           "piano-surprise-song": ["Never Grow Up / The Best Day", "The Tortured Poets Department / Maroon", "Long Live / New Year's Day / The Manuscript"],
+          "mashup-songs": ["Haunted", "Wonderland", "I Love You, I'm Sorry", "Last Kiss", "A Place in This World", "New Romantics", "Never Grow Up", "The Best Day", "The Tortured Poets Department", "Maroon", "Long Live", "New Year's Day", "The Manuscript"],
           "instagram": ["https://www.instagram.com/p/DDdQlYOuVxM/"],
           "lat": 49.276702965701304,
           "lng": -123.11199381168475
