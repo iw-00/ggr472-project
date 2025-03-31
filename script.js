@@ -37,7 +37,7 @@ function visualizeData() {
     // Add source for show data
     map.addSource("show-data", {
         type: "geojson",
-        data: "https://raw.githubusercontent.com/iw-00/ggr472-project/refs/heads/main/data/shows.geojson"
+        data: "https://iw-00.github.io/ggr472-project/data/shows.geojson"
     });
 
     // Add stadium points to map
