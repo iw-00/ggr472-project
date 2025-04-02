@@ -50,11 +50,11 @@ function visualizeData() {
               "step",
               ["get", "shows"],
               3,
-              1, 3,
+              1, 2,
               2, 4,
-              3, 5,
-              4, 6,
-              5, 7
+              3, 6,
+              4, 8,
+              5, 10
             ],
             "circle-color": "#5B1166"
         }
@@ -323,6 +323,43 @@ $(function(){
 //   }
 // }
 
+/*---------------------------
+ADDING LEGEND TO MAP VISIBLE ONLY AT FULL EXTENT
+-----------------------------*/
+
+const legend = document.getElementById('legend');
+
+const legendLabels = [
+  { label: '1 show', size: 2 },
+  { label: '2 shows', size: 4 },
+  { label: '3 shows', size: 6 },
+  { label: '4 shows', size: 8 },
+  { label: '5+ shows', size: 10 },
+]
+
+    // Loop through the legend labels and create legend items
+    legendLabels.forEach((item) => {
+      const legendItem = document.createElement("div");
+      legendItem.className = "legend-item";
+
+      // Create the circle for the legend
+      const circle = document.createElement("div");
+      circle.className = "legend-circle";
+      circle.style.width = `${item.size * 2}px`; // Adjust size for better visibility
+      circle.style.height = `${item.size * 2}px`;
+      circle.style.backgroundColor = "#5B1166"; // Match the circle color in the map
+
+      // Add the label
+      const label = document.createElement("span");
+      label.textContent = item.label;
+
+      // Append the circle and label to the legend item
+      legendItem.appendChild(circle);
+      legendItem.appendChild(label);
+
+      // Append the legend item to the legend container
+      legend.appendChild(legendItem);
+  });
 
 /*---------------------------
 SET VISIBILITY OF CONTAINERS AT 3D ZOOM AND PITCH 
@@ -345,12 +382,14 @@ function checkVisibility() {
     openerDropdown.style.display = 'none';
     showInformation.style.display = 'block';
     songSearch.style.display = 'none';
+    legend.style.display = 'none';
   } else {
     console.log('Hiding searchContainer and openerDropdown, showing showInformation');
     searchContainer.style.display = 'block';
     openerDropdown.style.display = 'block';
     showInformation.style.display = 'none';
     songSearch.style.display = 'block';
+    legend.style.display = 'block';
   }
 }
 

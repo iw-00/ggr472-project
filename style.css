@@ -86,7 +86,21 @@
     bottom: 15px;
     right: 5px;
     max-width: 45%;
-    max-height: 40%;
+    max-height: 42%;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 8px
+}
+
+.map-legend {
+    position: fixed;
+    bottom: 15px;
+    right: 5px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px
+}
+
+.map-legend .legend-circle {
+    border-radius: 50%;
+    background-color: #5B1166
 }
