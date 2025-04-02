@@ -115,6 +115,8 @@ map.on("mouseleave", "show-pts", () => {
 // When mouse clicks a point
 map.on("click", "show-pts", (e) => {
     const coordinates = [e.features[0].properties.lng, e.features[0].properties.lat] // Retrieve coordinates of point
+    const properties = e.features[0].properties; // Retrieve properties of the clicked point
+
 
     // Move camera to clicked point
     map.flyTo({
@@ -162,6 +164,34 @@ map.on("click", "show-pts", (e) => {
       });
     }
     }, 0);
+     // Update the 'show-info' div with data from the properties
+     const showInfoDiv = document.getElementById("show-info");
+     if (showInfoDiv) {
+       // Clear any existing content
+       showInfoDiv.innerHTML = "";
+
+       // Add content dynamically
+       const cityCountry = `<h5>${properties.city}, ${properties.country}</h5>`;
+       const venue = `<p><strong>Venue:</strong> ${properties.venue || "N/A"}</p>`;
+       const dates = `<p><strong>Dates:</strong> ${properties.dates || "N/A"}</p>`;
+       const opener = `<p><strong>Opening Act:</strong> ${properties.opener || "N/A"}</p>`;
+
+       // Handle surprise songs (check if they are arrays or strings)
+       const guitarSongs = Array.isArray(properties["guitar-surprise-song"])
+           ? properties["guitar-surprise-song"].join(", ")
+           : properties["guitar-surprise-song"] || "N/A";
+
+       const pianoSongs = Array.isArray(properties["piano-surprise-song"])
+           ? properties["piano-surprise-song"].join(", ")
+           : properties["piano-surprise-song"] || "N/A";
+          
+        
+
+       const surpriseSongs = `<p><strong>Guitar Surprise Song(s): </strong>${guitarSongs}, <br><strong>Piano Surprise Song(s):</strong> ${pianoSongs}</p>`;
+
+       // Combine all content and update the div
+       showInfoDiv.innerHTML = cityCountry + venue + dates + opener + surpriseSongs;
+    };
 });
 
 /*---------------------------
@@ -307,17 +337,20 @@ function checkVisibility() {
   const searchContainer = document.getElementById('map-search-container');
   const openerDropdown = document.getElementById('opener-dropdown')
   const showInformation = document.getElementById('show-info');
+  const songSearch = document.getElementById('song-search');
 
   if (zoomLevel >= 17 && pitchLevel >=65) {
     console.log('Showing searchContainer and openerDropdown, hiding showInformation');
     searchContainer.style.display = 'none';
     openerDropdown.style.display = 'none';
     showInformation.style.display = 'block';
+    songSearch.style.display = 'none';
   } else {
     console.log('Hiding searchContainer and openerDropdown, showing showInformation');
     searchContainer.style.display = 'block';
     openerDropdown.style.display = 'block';
     showInformation.style.display = 'none';
+    songSearch.style.display = 'block';
   }
 }
 
@@ -328,3 +361,4 @@ map.on('load', () => {
   checkVisibility();
   visualizeData();
 })
+
