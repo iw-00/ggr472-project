@@ -10,7 +10,7 @@ const map = new mapboxgl.Map({
     projection: 'mercator',
     style: "mapbox://styles/stanfordchang/cm8kr9l8600rp01ry7b712acl", // custom style URL (Monochrome)
     center: [2.340180, 26.389773], // starting location
-    zoom: 1.0 // starting zoom level
+    zoom: 1.3 // starting zoom level
 });
 
 /*---------------------------
@@ -50,7 +50,7 @@ function visualizeData() {
               "step",
               ["get", "shows"],
               3,
-              1, 2,
+              1, 3,
               2, 4,
               3, 6,
               4, 8,
@@ -143,12 +143,12 @@ map.on("click", "show-pts", (e) => {
     setTimeout(() => {
     const stadiumbtn = document.getElementById(buttonID);
     if (stadiumbtn) {
-      stadiumbtn.addEventListener("click", () => {
+        stadiumbtn.addEventListener("click", () => {
         // Jump to the stadium
         map.jumpTo({
-          center: coordinates,
-          zoom: 17, // Zoom in to the stadium
-          pitch: 65 // Pitch the camera to show 3D buildings
+            center: coordinates,
+            zoom: 17, // Zoom in to the stadium
+            pitch: 65 // Pitch the camera to show 3D buildings
         });
 
         // Start continuous rotation animation
@@ -156,9 +156,12 @@ map.on("click", "show-pts", (e) => {
 
         map.setStyle('mapbox://styles/stanfordchang/cm8gipc43015j01s52jfo9p21'); // Change map style (Mapbox Standard)
       
-       // Load sources and layers that were reset after style is changed
+        // Load sources and layers that were reset after style is changed (???)
         map.once('style.load', () => {
-            visualizeData();
+            // visualizeData();
+
+        // Hide stadium points
+        map.setLayoutProperty('show-pts', 'visibility', 'none')
   });
 
       });
@@ -174,7 +177,7 @@ map.on("click", "show-pts", (e) => {
        const cityCountry = `<h5>${properties.city}, ${properties.country}</h5>`;
        const venue = `<p><strong>Venue:</strong> ${properties.venue || "N/A"}</p>`;
        const dates = `<p><strong>Dates:</strong> ${properties.dates || "N/A"}</p>`;
-       const opener = `<p><strong>Opening Act:</strong> ${properties.opener || "N/A"}</p>`;
+       const opener = `<p><strong>Opening act(s):</strong> ${properties.opener || "N/A"}</p>`;
 
        // Handle surprise songs (check if they are arrays or strings)
        const guitarSongs = Array.isArray(properties["guitar-surprise-song"])
@@ -184,10 +187,8 @@ map.on("click", "show-pts", (e) => {
        const pianoSongs = Array.isArray(properties["piano-surprise-song"])
            ? properties["piano-surprise-song"].join(", ")
            : properties["piano-surprise-song"] || "N/A";
-          
         
-
-       const surpriseSongs = `<p><strong>Guitar Surprise Song(s): </strong>${guitarSongs}, <br><strong>Piano Surprise Song(s):</strong> ${pianoSongs}</p>`;
+       const surpriseSongs = `<p><strong>🎸 Guitar surprise songs: </strong>${guitarSongs}, <br><br><strong>🎹 Piano surprise songs:</strong> ${pianoSongs}</p>`;
 
        // Combine all content and update the div
        showInfoDiv.innerHTML = cityCountry + venue + dates + opener + surpriseSongs;
@@ -225,8 +226,6 @@ function startRotation() {
             duration: 5000, // For 5 seconds
             easing: (t) => t // Linear easing
           });
-
-          map.setLayoutProperty('show-pts', 'visibility', 'none') // Hide stadium points
         
           rotationTimeout = setTimeout(rotate, 5000); // Start next segment when animation is done
           
@@ -276,15 +275,15 @@ document.getElementById("openers").addEventListener("change",(e) => {
 SEARCH BY SURPRISE SONG
 -----------------------------*/
 
-// Add search functionality to dropdown.
+// Add search functionality to dropdown
 $(document).ready(function() {
   $('.js-example-basic-single').select2();
 });
 
 $(function(){
-  // turn the element to select2 select style
+  // Turn the element to select2 select style
   $('.js-example-basic-single').select2({
-    placeholder: "Search for a song..."
+    placeholder: "Search for a surprise song"
   });
 
   $('.js-example-basic-single').on('change', function() {
@@ -330,7 +329,7 @@ ADDING LEGEND TO MAP VISIBLE ONLY AT FULL EXTENT
 const legend = document.getElementById('legend');
 
 const legendLabels = [
-  { label: '1 show', size: 2 },
+  { label: '1 show', size: 3 },
   { label: '2 shows', size: 4 },
   { label: '3 shows', size: 6 },
   { label: '4 shows', size: 8 },

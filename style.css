@@ -12,13 +12,12 @@
 
 #returnbutton {
     /* Width of the button relative to width of the sidebar */
-    width: 21%;
+    width: 300px;
     top: 5px;
     left: 5px
 }
 
 .map-search-container {
-    position: left;
     /* background: rgba(177, 128, 206, 0.5); */
     background: rgba(0, 0, 0);
     top: 0;
@@ -38,7 +37,7 @@
     padding: 10px;
     border-radius: 8px;
     overflow: visible; 
-    width: 21%
+    width: 300px;
 }
 
 .mapboxgl-popup-content {
@@ -60,24 +59,26 @@
     background: rgba(0, 0, 0);
     top: 120px;
     left: 5px;
-    width: 21%;
+    width: 200px;
     margin-top: 20px;
     padding: 10px;
     border-radius: 8px;
     overflow: visible; /* does not clip overflow */
+    color: white;
 }
 
 .song-search {
     position: fixed;
     /* background: rgba(177, 128, 206, 0.5); */
     background: rgba(0, 0, 0);
-    top: 265px;
-    left: 5px;
-    width: 21%;
+    top: 120px;
+    left: 220px;
+    width: 350px;
     margin-top: 20px;
     padding: 10px;
     border-radius: 8px;
     overflow: visible; /* does not clip overflow */
+    color: white;
 }
 
 .show-info {
@@ -85,8 +86,8 @@
     position: fixed;
     bottom: 15px;
     right: 5px;
-    max-width: 45%;
-    max-height: 42%;
+    max-width: 25%;
+    max-height: 70%;
     padding: 10px;
     border-radius: 8px
 }
