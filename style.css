@@ -4,7 +4,7 @@
 
 /* Map */
 .map-container {
-    width: 80%;
+    width: 75%;
     float: right;
     height: calc(100vh - 95px); /* account for navbar */
     margin-top: 10px;
@@ -19,6 +19,7 @@
     overflow: visible
 }
 
+/* Controls and filters */
 #returnbutton {
     position: relative;
     width: 200px;
@@ -40,10 +41,11 @@
 #opener-dropdown {
     position: fixed;
     left: 10px;
-    width: calc(20% - 30px);
+    width: calc(25% - 30px);
     padding: 10px;
     overflow: visible; /* does not clip overflow */
     z-index: 3;
+    background: white;
     border: 3px solid #5B1166;
     font-size: 16px;
 }
@@ -52,16 +54,17 @@
     position: fixed;
     margin-top: 10px;
     left: 10px;
-    width: calc(20% - 30px);
+    width: calc(25% - 30px);
     margin-top: 20px;
     padding: 10px;
     overflow: visible; /* does not clip overflow */
     z-index: 3;
+    background: white;
     border: 3px solid #5B1166;
     font-size: 16px;
 }
 
-
+/* Pop up and sidebar */
 .mapboxgl-popup-content {
     color: #000;
     background-color: #fff;
@@ -70,15 +73,17 @@
 
 .show-info {
     float: left;
-    width: calc(20% - 30px);
+    width: calc(25% - 30px);
     max-height: 100%;
     padding: 10px;
     margin-left: 10px;
     margin-top: 10px;
     overflow-y: scroll; /* vertical scroll overflow */
+    background: white;
     border: 3px solid #5B1166;
 }
 
+/* Legend */
 .map-legend {
     position: fixed;
     bottom: 50px;
