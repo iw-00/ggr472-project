@@ -1,107 +1,101 @@
 .navbar {
-    height: 80px; /* Set your desired height */
+    height: 75px;
 }
 
+/* Map */
 .map-container {
-    position: absolute;
-    top: 80px;
-    right: 0;
-    width: 100%;
-    height: calc(100vh - 80px); /* Full viewport height minus navbar height */
-}
-
-#returnbutton {
-    /* Width of the button relative to width of the sidebar */
-    width: 300px;
-    top: 5px;
-    left: 5px
+    width: 80%;
+    float: right;
+    height: calc(100vh - 95px); /* account for navbar */
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 3px solid #5B1166;
 }
 
 .map-search-container {
-    /* background: rgba(177, 128, 206, 0.5); */
-    background: rgba(0, 0, 0);
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin-top: 20px;
+    float: left;
+    margin-left: 10px;
     padding: 10px;
-    border-radius: 8px;
-    overflow: visible; /* does not clip overflow */
+    overflow: visible
 }
 
-.geocoder {
-    position: fixed;
-    top: 220px;
-    left: 5px;
-    background: rgba(0, 0, 0);
-    padding: 10px;
-    border-radius: 8px;
-    overflow: visible; 
-    width: 300px;
+#returnbutton {
+    position: relative;
+    width: 200px;
+    margin-top: 10px;
+    left: 10px;
+    float: left;
+    z-index: 2;
 }
+
+#exitbutton {
+    position: relative;
+    width: 200px;
+    margin-top: 10px;
+    left: 10px;
+    float: left;
+    z-index: 3;
+}
+
+#opener-dropdown {
+    position: fixed;
+    left: 10px;
+    width: calc(20% - 30px);
+    padding: 10px;
+    overflow: visible; /* does not clip overflow */
+    z-index: 3;
+    border: 3px solid #5B1166;
+    font-size: 16px;
+}
+
+#song-search {
+    position: fixed;
+    margin-top: 10px;
+    left: 10px;
+    width: calc(20% - 30px);
+    margin-top: 20px;
+    padding: 10px;
+    overflow: visible; /* does not clip overflow */
+    z-index: 3;
+    border: 3px solid #5B1166;
+    font-size: 16px;
+}
+
 
 .mapboxgl-popup-content {
     color: #000;
     background-color: #fff;
     border-radius: 5px;
-  }
-
-/* Modifications to Bootswatch Lux theme */
-.btn-outline-info {
-    width: 100%;
-    font-size: 0.8rem;
-    padding: 4px 10px;
-}
-
-.opener-dropdown {
-    position: fixed;
-    /* background: rgba(177, 128, 206, 0.5); */
-    background: rgba(0, 0, 0);
-    top: 120px;
-    left: 5px;
-    width: 200px;
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 8px;
-    overflow: visible; /* does not clip overflow */
-    color: white;
-}
-
-.song-search {
-    position: fixed;
-    /* background: rgba(177, 128, 206, 0.5); */
-    background: rgba(0, 0, 0);
-    top: 120px;
-    left: 220px;
-    width: 350px;
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 8px;
-    overflow: visible; /* does not clip overflow */
-    color: white;
 }
 
 .show-info {
-    background-color: lavender;
-    position: fixed;
-    bottom: 15px;
-    right: 5px;
-    max-width: 25%;
-    max-height: 70%;
+    float: left;
+    width: calc(20% - 30px);
+    max-height: 100%;
     padding: 10px;
-    border-radius: 8px
+    margin-left: 10px;
+    margin-top: 10px;
+    overflow-y: scroll; /* vertical scroll overflow */
+    border: 3px solid #5B1166;
 }
 
 .map-legend {
     position: fixed;
-    bottom: 15px;
-    right: 5px;
+    bottom: 50px;
+    right: 30px;
     background: white;
     padding: 10px;
-    border-radius: 8px
+    border: 3px solid #5B1166;
 }
 
 .map-legend .legend-circle {
     border-radius: 50%;
     background-color: #5B1166
+}
+
+/* Modifications to Bootswatch theme */
+.btn-outline-info {
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 4px 10px;
 }

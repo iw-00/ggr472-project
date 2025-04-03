@@ -34,6 +34,7 @@ document.getElementById("geocoder").appendChild(geocoder.onAdd(map));
 VISUALIZE DATA
 ---------------------------*/
 function visualizeData() {
+
     // Add source for show data
     map.addSource("show-data", {
         type: "geojson",
@@ -65,12 +66,22 @@ map.on("load", () => {
     visualizeData()
 });
 
-/*---------------------------
-BUTTON: RETURN TO FULL EXTENT
------------------------------*/
+/*---------------------------------------
+BUTTON: RETURN TO FULL EXTENT & EXIT MAP
+-----------------------------------------*/
+
+document.getElementById('returnbutton').addEventListener('click', () => {
+    map.jumpTo({
+      center: [2.340180, 26.389773],
+      zoom: 1.0, // Reset to original zoom
+      pitch: 0, // Reset to original pitch
+      bearing: 0, // Reset to original rotation
+      essential: true
+    });
+});
 
 // Add function to the return button with jumpTo, bringing us back to our original zoom and center point
-document.getElementById('returnbutton').addEventListener('click', () => {
+document.getElementById('exitbutton').addEventListener('click', () => {
     map.jumpTo({
       center: [2.340180, 26.389773],
       zoom: 1.0, // Reset to original zoom
@@ -96,7 +107,7 @@ document.getElementById('returnbutton').addEventListener('click', () => {
     });
 
     stopRotation(); // Cancel rotation animation
-  });
+});
 
 /*---------------------------
 MOUSE EVENTS
@@ -155,14 +166,9 @@ map.on("click", "show-pts", (e) => {
         startRotation(map);
 
         map.setStyle('mapbox://styles/stanfordchang/cm8gipc43015j01s52jfo9p21'); // Change map style (Mapbox Standard)
-      
-        // Load sources and layers that were reset after style is changed (???)
-        map.once('style.load', () => {
-            // visualizeData();
 
         // Hide stadium points
-        map.setLayoutProperty('show-pts', 'visibility', 'none')
-  });
+        map.setLayoutProperty('show-pts', 'visibility', 'none');
 
       });
     }
@@ -174,10 +180,10 @@ map.on("click", "show-pts", (e) => {
        showInfoDiv.innerHTML = "";
 
        // Add content dynamically
-       const cityCountry = `<h5>${properties.city}, ${properties.country}</h5>`;
+       const cityCountry = `<h3>${properties.city}, ${properties.country}</h3>`;
        const venue = `<p><strong>Venue:</strong> ${properties.venue || "N/A"}</p>`;
        const dates = `<p><strong>Dates:</strong> ${properties.dates || "N/A"}</p>`;
-       const opener = `<p><strong>Opening act(s):</strong> ${properties.opener || "N/A"}</p>`;
+       const opener = `<p><strong>Opening acts:</strong> ${properties.opener || "N/A"}</p>`;
 
        // Handle surprise songs (check if they are arrays or strings)
        const guitarSongs = Array.isArray(properties["guitar-surprise-song"])
@@ -283,7 +289,7 @@ $(document).ready(function() {
 $(function(){
   // Turn the element to select2 select style
   $('.js-example-basic-single').select2({
-    placeholder: "Search for a surprise song"
+    placeholder: "Search for a song (e.g., Maroon)"
   });
 
   $('.js-example-basic-single').on('change', function() {
@@ -374,6 +380,8 @@ function checkVisibility() {
   const openerDropdown = document.getElementById('opener-dropdown')
   const showInformation = document.getElementById('show-info');
   const songSearch = document.getElementById('song-search');
+  const returnButton = document.getElementById('returnbutton');
+  const exitButton = document.getElementById('exitbutton');
 
   if (zoomLevel >= 17 && pitchLevel >=65) {
     console.log('Showing searchContainer and openerDropdown, hiding showInformation');
@@ -382,6 +390,8 @@ function checkVisibility() {
     showInformation.style.display = 'block';
     songSearch.style.display = 'none';
     legend.style.display = 'none';
+    exitButton.style.display = 'block';
+    returnButton.style.display = 'none';
   } else {
     console.log('Hiding searchContainer and openerDropdown, showing showInformation');
     searchContainer.style.display = 'block';
@@ -389,6 +399,8 @@ function checkVisibility() {
     showInformation.style.display = 'none';
     songSearch.style.display = 'block';
     legend.style.display = 'block';
+    exitButton.style.display = 'none';
+    returnButton.style.display = 'block';
   }
 }
 
