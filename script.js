@@ -261,10 +261,11 @@ FILTER BY OPENING ACT
 
 let selectedOpener;
 
+// Event listener for opening act
 document.getElementById("openers").addEventListener("change",(e) => {   
   selectedOpener = document.getElementById("openers").value; // get selected opener value
 
-  console.log(selectedOpener);
+  // console.log(selectedOpener);
 
   if (selectedOpener == 'All') {
     map.setFilter(
@@ -283,19 +284,20 @@ SEARCH BY SURPRISE SONG
 
 // Add search functionality to dropdown
 $(document).ready(function() {
-  $('.js-example-basic-single').select2();
+  $('.song-searchbar').select2();
 });
 
 $(function(){
   // Turn the element to select2 select style
-  $('.js-example-basic-single').select2({
+  $('.song-searchbar').select2({
     placeholder: "Search for a song (e.g., Maroon)"
   });
 
-  $('.js-example-basic-single').on('change', function() {
-    var selectedSong = $(".js-example-basic-single option:selected").text();
+  // Event listener for surprise song.
+  $('.song-searchbar').on('change', function() {
+    var selectedSong = $(".song-searchbar option:selected").text(); // get selected song
     $("#test").val(selectedSong);
-    console.log(selectedSong);
+    // console.log(selectedSong);
 
     if (selectedSong == 'All') {
       map.setFilter(
@@ -303,30 +305,75 @@ $(function(){
     } else {
       map.setFilter(
           'show-pts',
-          ["any", ['in', selectedSong, ['get', 'guitar-surprise-song']], ['in', selectedSong, ['get', 'piano-surprise-song']], ['in', selectedSong, ['get', 'mashup-songs']]] // return points with song that matches selection
+          ["any", ['in', selectedSong, ['get', 'guitar-surprise-song']], 
+          ['in', selectedSong, ['get', 'piano-surprise-song']], 
+          ['in', selectedSong, ['get', 'mashup-songs']]] // return points with song that matches selection
       );
     }
 
   })
 });
 
-// Search bar functionality
-// function myFunction() {
-//   var input, filter, ul, li, a, i, txtValue;
-//   input = document.getElementById("myInput");
-//   filter = input.value.toUpperCase();
-//   ul = document.getElementById("myUL");
-//   li = ul.getElementsByTagName("li");
-//   for (i = 0; i < li.length; i++) {
-//       a = li[i].getElementsByTagName("a")[0];
-//       txtValue = a.textContent || a.innerText;
-//       if (filter && txtValue.toUpperCase().indexOf(filter) > -1) {
-//           li[i].style.display = "";
-//       } else {
-//           li[i].style.display = "none";
-//       }
-//   }
-// }
+/*---------------------------
+REGION BUTTONS
+-----------------------------*/
+
+// Zoom to North America venues.
+document.getElementById('noram-button').addEventListener('click', () => {
+  map.jumpTo({
+    center: [-95.095, 35.049],
+    zoom: 3.5, // Zoom in
+    pitch: 0, // Reset to original pitch
+    bearing: 0, // Reset to original rotation
+    essential: true
+  });
+});
+
+// Zoom to South America venues.
+document.getElementById('southam-button').addEventListener('click', () => {
+  map.jumpTo({
+    center: [-60.686, -28.670],
+    zoom: 3.25, // Zoom in
+    pitch: 0, // Reset to original pitch
+    bearing: 0, // Reset to original rotation
+    essential: true
+  });
+});
+
+// Zoom to Europe venues.
+document.getElementById('eu-button').addEventListener('click', () => {
+  map.jumpTo({
+    center: [8.320, 50.002],
+    zoom: 3.8, // Zoom in
+    pitch: 0, // Reset to original pitch
+    bearing: 0, // Reset to original rotation
+    essential: true
+  });
+});
+
+// Zoom to Asia venues.
+document.getElementById('asia-button').addEventListener('click', () => {
+  map.jumpTo({
+    center: [130.023, 23.429],
+    zoom: 3, // Zoom in
+    pitch: 0, // Reset to original pitch
+    bearing: 0, // Reset to original rotation
+    essential: true
+  });
+});
+
+// Zoom to Australia venues.
+document.getElementById('aus-button').addEventListener('click', () => {
+  map.jumpTo({
+    center: [134.550, -25.955],
+    zoom: 3.9, // Zoom in
+    pitch: 0, // Reset to original pitch
+    bearing: 0, // Reset to original rotation
+    essential: true
+  });
+});
+
+
 
 /*---------------------------
 ADDING LEGEND TO MAP VISIBLE ONLY AT FULL EXTENT
@@ -382,7 +429,10 @@ function checkVisibility() {
   const songSearch = document.getElementById('song-search');
   const returnButton = document.getElementById('returnbutton');
   const exitButton = document.getElementById('exitbutton');
+  const regionContainer = document.getElementById('region-button-container');
+  const descContainer = document.getElementById('description-container');
 
+  // Hide everything except show info and exit button in 3D view.
   if (zoomLevel >= 17 && pitchLevel >=65) {
     console.log('Showing searchContainer and openerDropdown, hiding showInformation');
     searchContainer.style.display = 'none';
@@ -392,6 +442,8 @@ function checkVisibility() {
     legend.style.display = 'none';
     exitButton.style.display = 'block';
     returnButton.style.display = 'none';
+    regionContainer.style.display = 'none';
+    descContainer.style.display = 'none';
   } else {
     console.log('Hiding searchContainer and openerDropdown, showing showInformation');
     searchContainer.style.display = 'block';
@@ -401,6 +453,8 @@ function checkVisibility() {
     legend.style.display = 'block';
     exitButton.style.display = 'none';
     returnButton.style.display = 'block';
+    regionContainer.style.display = 'block';
+    descContainer.style.display = 'block';
   }
 }
 

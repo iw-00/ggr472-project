@@ -62,6 +62,36 @@
     font-size: 16px;
 }
 
+.region-buttons {
+    float: left;
+    width: calc(25% - 30px);
+    padding: 10px;
+    margin: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    overflow: visible; /* does not clip overflow */
+    background: white;
+    border: 3px solid #5B1166;
+    font-size: 16px;
+}
+
+.region-button {
+    margin-top: 5px;
+}
+
+.description {
+    float: left;
+    width: calc(25% - 30px);
+    padding: 10px;
+    margin: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    overflow: visible; /* does not clip overflow */
+    background: white;
+    border: 3px solid #5B1166;
+    font-size: 16px;
+}
+
 /* Pop up and sidebar */
 .mapboxgl-popup-content {
     color: #000;

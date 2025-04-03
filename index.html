@@ -105,15 +105,9 @@
 
     <!-- Search for surprise song -->
     <div class='song-search' id='song-search'>
-            <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a Surprise Song.." title="Type in a song">
 
-            <ul id="myUL">
-            <li><a href="#">Maroon</a></li>
-            <li><a href="#">Carolina</a></li>
-            <li><a href="#">'Slut!'</a></li>
-            </ul> -->
         <label for="songs"><h6>Filter by surprise songs</h6></label>
-        <select class="js-example-basic-single" name="songs" id="songs">
+        <select class="song-searchbar" name="songs" id="songs">
             <option value="" disabled selected>Search for a song (e.g., Maroon)</option>
             <option value="All">All</option>
             <option value="The 1">The 1</option>
@@ -312,7 +306,28 @@
             <option value="You're on Your Own, Kid">You're on Your Own, Kid</option>            
         </select>
     </div>
+    <div class='region-buttons' id='region-button-container'>
+        <h6>Zoom to a region</h6>
+        <!-- Buttons to zoom to specific regions -->
+        <button type="button" class="btn btn-primary region-button" id="noram-button">North America</button>
+        <button type="button" class="btn btn-primary region-button" id="southam-button">South America</button> <br>
+        <button type="button" class="btn btn-primary region-button" id="eu-button">Europe</button>
+        <button type="button" class="btn btn-primary region-button" id="asia-button">Asia</button>
+        <button type="button" class="btn btn-primary region-button" id="aus-button">Australia</button> 
+    </div>
 
+    <div class='description' id='description-container'>
+        <h5>Welcome to The Eras Map!</h5>
+
+        <ul>
+            <li>📅 Click on a point to view show dates.</li>
+            <li>🏟️ Click "Go to" for a 3D view of the venue.</li>
+            <li>🎤 "Filter by opening act" to see where each supporting act performed.</li>
+            <li>🎵 "Filter by surprise songs" to see where your favourite surprise songs were performed.</li>
+        </ul>
+
+        Data is based on <a href="https://en.wikipedia.org/wiki/The_Eras_Tour" target="_blank">The Eras Tour Wikipedia</a>.
+    </div>
 
 </div>
 
