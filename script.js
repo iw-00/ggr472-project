@@ -196,10 +196,8 @@ map.on("click", "show-pts", (e) => {
         
        const surpriseSongs = `<p><strong>🎸 Guitar surprise songs: </strong>${guitarSongs}, <br><br><strong>🎹 Piano surprise songs:</strong> ${pianoSongs}</p>`;
 
-       const tiktokEmbed = `${properties.tiktok || ""}`;
-
        // Combine all content and update the div
-       showInfoDiv.innerHTML = cityCountry + venue + dates + opener + surpriseSongs + tiktokEmbed;
+       showInfoDiv.innerHTML = cityCountry + venue + dates + opener + surpriseSongs;
     };
 });
 
