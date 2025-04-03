@@ -38,27 +38,25 @@
     z-index: 3;
 }
 
-#opener-dropdown {
-    position: fixed;
-    left: 10px;
+.opener-dropdown {
+    float: left;
     width: calc(25% - 30px);
     padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
     overflow: visible; /* does not clip overflow */
-    z-index: 3;
     background: white;
     border: 3px solid #5B1166;
     font-size: 16px;
 }
 
-#song-search {
-    position: fixed;
-    margin-top: 10px;
-    left: 10px;
+.song-search {
+    float: left;
     width: calc(25% - 30px);
-    margin-top: 20px;
     padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
     overflow: visible; /* does not clip overflow */
-    z-index: 3;
     background: white;
     border: 3px solid #5B1166;
     font-size: 16px;
@@ -74,7 +72,7 @@
 .show-info {
     float: left;
     width: calc(25% - 30px);
-    max-height: 100%;
+    max-height: calc(100vh - 95px);
     padding: 10px;
     margin-left: 10px;
     margin-top: 10px;
@@ -103,4 +101,9 @@
     width: 100%;
     font-size: 0.8rem;
     padding: 4px 10px;
+}
+
+/* Modifications to Select 2 container */
+.select2-container {
+    width: 100% !important;
 }
